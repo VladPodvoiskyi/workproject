@@ -10,6 +10,10 @@
 		67700DEAD6FC3EB27D37BBAA /* Pods_Eredivisie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35DC948C4CE75295B42C43C5 /* Pods_Eredivisie.framework */; };
 		CE1695632005053F00E3BAE8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1695622005053F00E3BAE8 /* Constants.swift */; };
 		CE1695652005091300E3BAE8 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1695642005091300E3BAE8 /* Team.swift */; };
+		CE27EBA62006352C0045F9A6 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27EBA52006352C0045F9A6 /* TableCell.swift */; };
+		CE4232F72006080A00E01DDA /* Table.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4232F62006080A00E01DDA /* Table.storyboard */; };
+		CE4232F92006081C00E01DDA /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4232F82006081C00E01DDA /* Events.storyboard */; };
+		CE4232FC20060AAE00E01DDA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4232FB20060AAE00E01DDA /* TableViewController.swift */; };
 		CE69BB7A2004E1BD00844D53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69BB792004E1BD00844D53 /* AppDelegate.swift */; };
 		CE69BB7C2004E1BE00844D53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69BB7B2004E1BE00844D53 /* ViewController.swift */; };
 		CE69BB7F2004E1BE00844D53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE69BB7D2004E1BE00844D53 /* Main.storyboard */; };
@@ -23,6 +27,10 @@
 		35DC948C4CE75295B42C43C5 /* Pods_Eredivisie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eredivisie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1695622005053F00E3BAE8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE1695642005091300E3BAE8 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		CE27EBA52006352C0045F9A6 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		CE4232F62006080A00E01DDA /* Table.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Table.storyboard; sourceTree = "<group>"; };
+		CE4232F82006081C00E01DDA /* Events.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
+		CE4232FB20060AAE00E01DDA /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		CE69BB762004E1BD00844D53 /* Eredivisie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eredivisie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE69BB792004E1BD00844D53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE69BB7B2004E1BE00844D53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +60,14 @@
 				35DC948C4CE75295B42C43C5 /* Pods_Eredivisie.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE4232FA20060A7300E01DDA /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				CE4232FB20060AAE00E01DDA /* TableViewController.swift */,
+			);
+			path = Table;
 			sourceTree = "<group>";
 		};
 		CE69BB6D2004E1BD00844D53 = {
@@ -86,6 +102,8 @@
 				CE69BB852004E1BE00844D53 /* LaunchScreen.storyboard */,
 				CE69BB882004E1BE00844D53 /* Info.plist */,
 				CE69BB802004E1BE00844D53 /* Eredivisie.xcdatamodeld */,
+				CE4232F62006080A00E01DDA /* Table.storyboard */,
+				CE4232F82006081C00E01DDA /* Events.storyboard */,
 			);
 			path = Eredivisie;
 			sourceTree = "<group>";
@@ -93,6 +111,7 @@
 		CE69BB8E2004E20900844D53 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE27EBA52006352C0045F9A6 /* TableCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -108,6 +127,7 @@
 		CE69BB902004E23100844D53 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CE4232FA20060A7300E01DDA /* Table */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -202,6 +222,8 @@
 				CE69BB872004E1BE00844D53 /* LaunchScreen.storyboard in Resources */,
 				CE69BB842004E1BE00844D53 /* Assets.xcassets in Resources */,
 				CE69BB7F2004E1BE00844D53 /* Main.storyboard in Resources */,
+				CE4232F72006080A00E01DDA /* Table.storyboard in Resources */,
+				CE4232F92006081C00E01DDA /* Events.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +289,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE69BB7C2004E1BE00844D53 /* ViewController.swift in Sources */,
+				CE4232FC20060AAE00E01DDA /* TableViewController.swift in Sources */,
 				CE69BB822004E1BE00844D53 /* Eredivisie.xcdatamodeld in Sources */,
+				CE27EBA62006352C0045F9A6 /* TableCell.swift in Sources */,
 				CE69BB7A2004E1BD00844D53 /* AppDelegate.swift in Sources */,
 				CE1695652005091300E3BAE8 /* Team.swift in Sources */,
 				CE1695632005053F00E3BAE8 /* Constants.swift in Sources */,

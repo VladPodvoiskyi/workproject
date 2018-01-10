@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Team.fetchTeams()
+//        Team.fetchTeams()
     }
 
     override func didReceiveMemoryWarning() {
