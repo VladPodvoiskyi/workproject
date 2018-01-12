@@ -30,9 +30,28 @@ class TableCell: UITableViewCell {
         loseCell.text = "\(forecast.overallLose!)"
         goalDifferenceCell.text = "\(forecast.overallGoalsScored! - forecast.overallMissedGoals!)"
         pointsCell.text = "\(forecast.overallPoints!)"
-        
-        
     }
     
+    func homeConfigureCell(forecast: Team) {
+        positionCell.text = "\(forecast.homePosition!)"
+        teamCell.text = "\(forecast.teamName!)"
+        gameCell.text = "\(forecast.homeMatches!)"
+        winCell.text = "\(forecast.homeWin!)"
+        drawCell.text = "\(forecast.homeDraw!)"
+        loseCell.text = "\(forecast.homeLose!)"
+        goalDifferenceCell.text = "\(forecast.homeGoalsScored! - forecast.homeMissedGoals!)"
+        pointsCell.text = "\(forecast.homePoints!)"
+    }
+    
+    func awayConfigureCell(forecast: Team) {
+        positionCell.text = "\(forecast.awayPosition!)"
+        teamCell.text = "\(forecast.teamName!)"
+        gameCell.text = "\(forecast.awayMatches!)"
+        winCell.text = "\(forecast.awayWin!)"
+        drawCell.text = "\(forecast.awayDraw!)"
+        loseCell.text = "\(forecast.awayLose!)"
+        goalDifferenceCell.text = "\(forecast.awayGoalsScored! - forecast.awayMissedGoals!)"
+        pointsCell.text = "\(forecast.awayPoints!)"
+    }
     
 }

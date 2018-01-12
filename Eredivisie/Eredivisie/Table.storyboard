@@ -79,8 +79,8 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="team team team" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyQ-03-RcR">
-                                                            <rect key="frame" x="3" y="6" width="90" height="12"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                            <rect key="frame" x="3" y="5.5" width="90" height="13.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -339,7 +339,7 @@
                                     <constraint firstAttribute="height" constant="1" id="WtJ-is-6f4"/>
                                 </constraints>
                             </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="pPR-fX-iDM">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="pPR-fX-iDM">
                                 <rect key="frame" x="66" y="30" width="188" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="5HL-hh-cNk"/>
@@ -369,6 +369,7 @@
                         <viewLayoutGuide key="safeArea" id="YNQ-Nv-POu"/>
                     </view>
                     <connections>
+                        <outlet property="tableModeSegmentedControl" destination="pPR-fX-iDM" id="qPa-WQ-5ao"/>
                         <outlet property="tableView" destination="69Q-W4-9du" id="SPe-bI-0Si"/>
                     </connections>
                 </viewController>
