@@ -71,7 +71,7 @@
         <scene sceneID="Qjd-Qa-CGH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nrb-TP-5B0" userLabel="HOME" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="HOME" id="j1O-2t-doI"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="j1O-2t-doI"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DGc-vT-hDJ">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

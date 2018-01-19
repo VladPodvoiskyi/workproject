@@ -22,6 +22,8 @@
 		CE69BB842004E1BE00844D53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE69BB832004E1BE00844D53 /* Assets.xcassets */; };
 		CE69BB872004E1BE00844D53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE69BB852004E1BE00844D53 /* LaunchScreen.storyboard */; };
 		CEDF5C992011E31800D2123F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5C982011E31800D2123F /* MainViewController.swift */; };
+		CEDF5C9C2012173800D2123F /* Alamofire+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5C9B2012173800D2123F /* Alamofire+Custom.swift */; };
+		CEDF5C9E20121C7D00D2123F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5C9D20121C7D00D2123F /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		CE69BB862004E1BE00844D53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE69BB882004E1BE00844D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEDF5C982011E31800D2123F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CEDF5C9B2012173800D2123F /* Alamofire+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Custom.swift"; sourceTree = "<group>"; };
+		CEDF5C9D20121C7D00D2123F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E6262578E6316540FDFEA170 /* Pods-Eredivisie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eredivisie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eredivisie/Pods-Eredivisie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +138,7 @@
 			children = (
 				CE4232FA20060A7300E01DDA /* Table */,
 				CEDF5C982011E31800D2123F /* MainViewController.swift */,
+				CEDF5C9D20121C7D00D2123F /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 		CE69BB912004E23C00844D53 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				CEDF5C9A2012171E00D2123F /* Extensions */,
 				CE1695622005053F00E3BAE8 /* Constants.swift */,
 			);
 			path = Helper;
@@ -152,6 +158,14 @@
 				CE69BB832004E1BE00844D53 /* Assets.xcassets */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		CEDF5C9A2012171E00D2123F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CEDF5C9B2012173800D2123F /* Alamofire+Custom.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D8588C17CFF17F3EC040E87E /* Pods */ = {
@@ -296,9 +310,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE69BB7C2004E1BE00844D53 /* ViewController.swift in Sources */,
+				CEDF5C9C2012173800D2123F /* Alamofire+Custom.swift in Sources */,
 				CE4232FC20060AAE00E01DDA /* TableViewController.swift in Sources */,
 				CE69BB822004E1BE00844D53 /* Eredivisie.xcdatamodeld in Sources */,
 				CE27EBA62006352C0045F9A6 /* TableCell.swift in Sources */,
+				CEDF5C9E20121C7D00D2123F /* HomeViewController.swift in Sources */,
 				CE69BB7A2004E1BD00844D53 /* AppDelegate.swift in Sources */,
 				CE1695652005091300E3BAE8 /* Team.swift in Sources */,
 				CE1695632005053F00E3BAE8 /* Constants.swift in Sources */,

@@ -12,8 +12,6 @@ class MainViewController: UITabBarController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("wtf")
+        self.selectedIndex = 1
     }
-
 }

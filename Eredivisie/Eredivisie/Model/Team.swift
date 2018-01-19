@@ -47,7 +47,7 @@ class Team {
         //all parse logic
         self.teamName = teamDict["team_name"] as? String
         
-        self.overallPosition = Int(teamDict["overall_league_position"] as? String ?? "")
+//        self.overallPosition = Int(teamDict["overall_league_position"] as? String ?? "")
         self.overallMatches = Int(teamDict["overall_league_payed"] as? String ?? "")
         self.overallWin = Int(teamDict["overall_league_W"] as? String ?? "")
         self.overallDraw = Int(teamDict["overall_league_D"] as? String ?? "")
@@ -56,7 +56,7 @@ class Team {
         self.overallMissedGoals = Int(teamDict["overall_league_GA"] as? String ?? "")
         self.overallPoints = Int(teamDict["overall_league_PTS"] as? String ?? "")
         
-        self.homePosition = Int(teamDict["home_league_position"] as? String ?? "")
+//        self.homePosition = Int(teamDict["home_league_position"] as? String ?? "")
         self.homeMatches = Int(teamDict["home_league_payed"] as? String ?? "")
         self.homeWin = Int(teamDict["home_league_W"] as? String ?? "")
         self.homeDraw = Int(teamDict["home_league_D"] as? String ?? "")
@@ -65,7 +65,7 @@ class Team {
         self.homeMissedGoals = Int(teamDict["home_league_GA"] as? String ?? "")
         self.homePoints = Int(teamDict["home_league_PTS"] as? String ?? "")
         
-        self.awayPosition = Int(teamDict["away_league_position"] as? String ?? "")
+//        self.awayPosition = Int(teamDict["away_league_position"] as? String ?? "")
         self.awayMatches = Int(teamDict["away_league_payed"] as? String ?? "")
         self.awayWin = Int(teamDict["away_league_W"] as? String ?? "")
         self.awayDraw = Int(teamDict["away_league_D"] as? String ?? "")
@@ -78,14 +78,15 @@ class Team {
     
     static func fetchTeams(handler: @escaping () -> Void) {
         let getTableURL = URL(string: GET_TABLE_URL)!
-        Alamofire.request(getTableURL).responseJSON { response in
+        
+        Alamofire.SessionManager.default.requestWithoutCache(getTableURL).responseJSON { (response) in
             let result = response.result
-            
             if let dictLeague = result.value as? [Dictionary<String, AnyObject>] {
                 for dictTeam in dictLeague {
                     let team = Team(teamDict: dictTeam)
                     Team.allTeams.append(team)
                 }
+    
                 handler()
             }
         }

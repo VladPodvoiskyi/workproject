@@ -22,7 +22,7 @@ class TableCell: UITableViewCell {
     @IBOutlet weak var pointsCell: UILabel!
     
     func configureCell(forecast: Team) {
-        positionCell.text = "\(forecast.overallPosition!)"
+//        positionCell.text = "\(forecast.overallPosition!)"
         teamCell.text = "\(forecast.teamName!)"
         gameCell.text = "\(forecast.overallMatches!)"
         winCell.text = "\(forecast.overallWin!)"
@@ -33,7 +33,7 @@ class TableCell: UITableViewCell {
     }
     
     func homeConfigureCell(forecast: Team) {
-        positionCell.text = "\(forecast.homePosition!)"
+//        positionCell.text = "\(forecast.homePosition!)"
         teamCell.text = "\(forecast.teamName!)"
         gameCell.text = "\(forecast.homeMatches!)"
         winCell.text = "\(forecast.homeWin!)"
@@ -44,7 +44,7 @@ class TableCell: UITableViewCell {
     }
     
     func awayConfigureCell(forecast: Team) {
-        positionCell.text = "\(forecast.awayPosition!)"
+//        positionCell.text = "\(forecast.awayPosition!)"
         teamCell.text = "\(forecast.teamName!)"
         gameCell.text = "\(forecast.awayMatches!)"
         winCell.text = "\(forecast.awayWin!)"

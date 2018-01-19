@@ -26,7 +26,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         Team.fetchTeams(handler: {
             self.teams = Team.allTeams
             self.teams.sort(by: { first, second in
-                return first.overallPosition < second.overallPosition
+                return first.overallPoints > second.overallPoints
             })
             self.tableView.reloadData()
         })
@@ -54,6 +54,8 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.configureCell(forecast: self.teams[indexPath.row])
         }
         
+        cell.positionCell.text = String(indexPath.row + 1)
+        
         return cell
     }
     
@@ -68,18 +70,32 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         case 0:
             self.teams = Team.allTeams
             self.teams.sort(by: { first, second in
-            return first.homePosition < second.homePosition
+                if first.homePoints == second.homePoints {
+                    return first.homeGoalsScored > second.homeGoalsScored
+                } else {
+                return first.homePoints > second.homePoints
+                }
             })
+        
         case 1:
             self.teams = Team.allTeams
             self.teams.sort(by: { first, second in
-            return first.overallPosition < second.overallPosition
+                if first.overallPoints == second.overallPoints {
+                    return first.overallGoalsScored > second.overallGoalsScored
+                } else {
+                    return first.overallPoints > second.overallPoints
+                }
             })
+
         case 2:
             self.teams = Team.allTeams
             self.teams.sort(by: { first, second in
-            return first.awayPosition < second.awayPosition
-        })
+                if first.awayPoints == second.awayPoints {
+                    return first.awayGoalsScored > second.awayGoalsScored
+                } else {
+                    return first.awayPoints > second.awayPoints
+                }
+            })
         default:
             break
         }
