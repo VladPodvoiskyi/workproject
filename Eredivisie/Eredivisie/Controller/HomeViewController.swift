@@ -15,14 +15,22 @@ class HomeViewController: UIViewController {
         eredivisieImageView.image = UIImage(named: "Eredivisie.png")
         eredivisieImageView.contentMode = .scaleAspectFill
         eredivisieImageView.translatesAutoresizingMaskIntoConstraints = false
+        eredivisieImageView.isUserInteractionEnabled = true
+        
         return eredivisieImageView
     }()
     
     override func viewDidLoad() {
         view.addSubview(mainImageView)
        mainImageViewConstrains()
+        self.mainImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onEredivisieImageView)))
+
         super.viewDidLoad()
 
+    }
+    
+    @objc func onEredivisieImageView() {
+        print("booooom")
     }
     
     func mainImageViewConstrains() {
