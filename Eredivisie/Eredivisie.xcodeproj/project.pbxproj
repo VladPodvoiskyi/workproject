@@ -11,6 +11,7 @@
 		CE1695632005053F00E3BAE8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1695622005053F00E3BAE8 /* Constants.swift */; };
 		CE1695652005091300E3BAE8 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1695642005091300E3BAE8 /* Team.swift */; };
 		CE27EBA62006352C0045F9A6 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27EBA52006352C0045F9A6 /* TableCell.swift */; };
+		CE41C94E2010EF7C00193719 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE41C94D2010EF7C00193719 /* Home.storyboard */; };
 		CE4232F72006080A00E01DDA /* Table.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4232F62006080A00E01DDA /* Table.storyboard */; };
 		CE4232F92006081C00E01DDA /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4232F82006081C00E01DDA /* Events.storyboard */; };
 		CE4232FC20060AAE00E01DDA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4232FB20060AAE00E01DDA /* TableViewController.swift */; };
@@ -20,6 +21,7 @@
 		CE69BB822004E1BE00844D53 /* Eredivisie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE69BB802004E1BE00844D53 /* Eredivisie.xcdatamodeld */; };
 		CE69BB842004E1BE00844D53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE69BB832004E1BE00844D53 /* Assets.xcassets */; };
 		CE69BB872004E1BE00844D53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE69BB852004E1BE00844D53 /* LaunchScreen.storyboard */; };
+		CEDF5C992011E31800D2123F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5C982011E31800D2123F /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,7 @@
 		CE1695622005053F00E3BAE8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE1695642005091300E3BAE8 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		CE27EBA52006352C0045F9A6 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		CE41C94D2010EF7C00193719 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		CE4232F62006080A00E01DDA /* Table.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Table.storyboard; sourceTree = "<group>"; };
 		CE4232F82006081C00E01DDA /* Events.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		CE4232FB20060AAE00E01DDA /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +42,7 @@
 		CE69BB832004E1BE00844D53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE69BB862004E1BE00844D53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE69BB882004E1BE00844D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEDF5C982011E31800D2123F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E6262578E6316540FDFEA170 /* Pods-Eredivisie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eredivisie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eredivisie/Pods-Eredivisie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +104,7 @@
 				CE69BB7D2004E1BE00844D53 /* Main.storyboard */,
 				CE69BB7B2004E1BE00844D53 /* ViewController.swift */,
 				CE69BB852004E1BE00844D53 /* LaunchScreen.storyboard */,
+				CE41C94D2010EF7C00193719 /* Home.storyboard */,
 				CE69BB882004E1BE00844D53 /* Info.plist */,
 				CE69BB802004E1BE00844D53 /* Eredivisie.xcdatamodeld */,
 				CE4232F62006080A00E01DDA /* Table.storyboard */,
@@ -128,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				CE4232FA20060A7300E01DDA /* Table */,
+				CEDF5C982011E31800D2123F /* MainViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -222,6 +228,7 @@
 				CE69BB872004E1BE00844D53 /* LaunchScreen.storyboard in Resources */,
 				CE69BB842004E1BE00844D53 /* Assets.xcassets in Resources */,
 				CE69BB7F2004E1BE00844D53 /* Main.storyboard in Resources */,
+				CE41C94E2010EF7C00193719 /* Home.storyboard in Resources */,
 				CE4232F72006080A00E01DDA /* Table.storyboard in Resources */,
 				CE4232F92006081C00E01DDA /* Events.storyboard in Resources */,
 			);
@@ -295,6 +302,7 @@
 				CE69BB7A2004E1BD00844D53 /* AppDelegate.swift in Sources */,
 				CE1695652005091300E3BAE8 /* Team.swift in Sources */,
 				CE1695632005053F00E3BAE8 /* Constants.swift in Sources */,
+				CEDF5C992011E31800D2123F /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
