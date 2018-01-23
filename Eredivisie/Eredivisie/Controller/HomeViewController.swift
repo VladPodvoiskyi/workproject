@@ -8,7 +8,8 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
 
     var mainImageView: UIImageView = {
         let eredivisieImageView = UIImageView()
@@ -20,13 +21,23 @@ class HomeViewController: UIViewController {
         return eredivisieImageView
     }()
     
+    var homeTableView = UITableView ()
+
+    var homeTableViewCell = UITableViewCell()
+    
+    
     override func viewDidLoad() {
-        view.addSubview(mainImageView)
-       mainImageViewConstrains()
+        mainImageViewConstrains()
         self.mainImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onEredivisieImageView)))
-
+        
+     //   homeTableView = UITableView(frame: self.view.bounds, style: UITableViewStyle.plain)
+        homeTableView.backgroundColor = UIColor.yellow
+        
+//        self.homeTableView.reloadData()
+        
+        self.homeTableView.register(HomeTableViewCell.self, forCellReuseIdentifier: "HomeTableViewCell")
+        
         super.viewDidLoad()
-
     }
     
     @objc func onEredivisieImageView() {
@@ -34,21 +45,45 @@ class HomeViewController: UIViewController {
     }
     
     func mainImageViewConstrains() {
+        self.view.addSubview(mainImageView)
         mainImageView.widthAnchor.constraint(equalToConstant: 200).isActive = true
         mainImageView.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        mainImageView.topAnchor.constraint(equalTo: self.mainImageView.superview!.topAnchor, constant: 85).isActive = true
-//        mainImageView.leftAnchor.constraint(equalTo: self.mainImageView.superview!.topAnchor, constant: 10)
-        mainImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-//        mainImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-       // (frame: CGRect(x:0, y:0, width:200, height:200))
-
-     //   let mainImageViewImageURL = UIWebView()
+//        mainImageView.topAnchor.constraint(equalTo: self.mainImageView.superview!.topAnchor, constant: 85).isActive = true
+        mainImageView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 85).isActive = true
+        mainImageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        
+        self.homeTableView.translatesAutoresizingMaskIntoConstraints = false
+        self.homeTableView.dataSource = self
+        self.homeTableView.delegate = self
+//        self.homeTableView.isScrollEnabled = false
+        
+        
+        self.view.addSubview(homeTableView)
+        homeTableView.topAnchor.constraint(equalTo: self.mainImageView.bottomAnchor, constant: 10).isActive = true
+        homeTableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 10).isActive = true
+        homeTableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10).isActive = true
+        homeTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        homeTableView.layer.cornerRadius = 30
+        
     }
     
     //    func loadPage() {
     //        let myPage = "https://eredivisie.nl"
     //    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 100
+    }
 
- 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = homeTableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as! HomeTableViewCell
+//        cell?.setUpCell()
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return self.homeTableView.frame.size.height / 10
+    }
+
+
 }
-

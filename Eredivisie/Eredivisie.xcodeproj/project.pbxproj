@@ -21,6 +21,7 @@
 		CE69BB822004E1BE00844D53 /* Eredivisie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE69BB802004E1BE00844D53 /* Eredivisie.xcdatamodeld */; };
 		CE69BB842004E1BE00844D53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE69BB832004E1BE00844D53 /* Assets.xcassets */; };
 		CE69BB872004E1BE00844D53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE69BB852004E1BE00844D53 /* LaunchScreen.storyboard */; };
+		CE816FCF2015E35400B9D65C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE816FCE2015E35400B9D65C /* HomeTableViewCell.swift */; };
 		CEDF5C992011E31800D2123F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5C982011E31800D2123F /* MainViewController.swift */; };
 		CEDF5C9C2012173800D2123F /* Alamofire+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5C9B2012173800D2123F /* Alamofire+Custom.swift */; };
 		CEDF5C9E20121C7D00D2123F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5C9D20121C7D00D2123F /* HomeViewController.swift */; };
@@ -44,6 +45,7 @@
 		CE69BB832004E1BE00844D53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE69BB862004E1BE00844D53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE69BB882004E1BE00844D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE816FCE2015E35400B9D65C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		CEDF5C982011E31800D2123F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CEDF5C9B2012173800D2123F /* Alamofire+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Custom.swift"; sourceTree = "<group>"; };
 		CEDF5C9D20121C7D00D2123F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				CE27EBA52006352C0045F9A6 /* TableCell.swift */,
+				CE816FCE2015E35400B9D65C /* HomeTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				CE4232FC20060AAE00E01DDA /* TableViewController.swift in Sources */,
 				CE69BB822004E1BE00844D53 /* Eredivisie.xcdatamodeld in Sources */,
 				CE27EBA62006352C0045F9A6 /* TableCell.swift in Sources */,
+				CE816FCF2015E35400B9D65C /* HomeTableViewCell.swift in Sources */,
 				CEDF5C9E20121C7D00D2123F /* HomeViewController.swift in Sources */,
 				CE69BB7A2004E1BD00844D53 /* AppDelegate.swift in Sources */,
 				CE1695652005091300E3BAE8 /* Team.swift in Sources */,
