@@ -28,15 +28,15 @@ class HomeTableViewCell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         makeView()
+        
     }
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         // Initialization code
     }
-
+// create labels for cell
     var homeTeam: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -52,7 +52,7 @@ class HomeTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.font = UIFont.preferredFont(forTextStyle: .footnote)
-        label.text = "Sparta Rotterdam"
+        label.text = "Ajax"
         
         return label
     }()
@@ -60,7 +60,9 @@ class HomeTableViewCell: UITableViewCell {
     var homeTeamGoals: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "10"
+        label.font = UIFont.preferredFont(forTextStyle: .footnote)
+//        label.textAlignment = .center
+        label.text = "39"
         
         return label
     }()
@@ -68,7 +70,8 @@ class HomeTableViewCell: UITableViewCell {
     var awayTeamGoals: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "01"
+        label.font = UIFont.preferredFont(forTextStyle: .footnote)
+        label.text = "18"
         
         return label
     }()
@@ -83,41 +86,43 @@ class HomeTableViewCell: UITableViewCell {
     
     private func makeView() {
         addMySubView()
-        makeConstraints()
+        addConstraints()
     }
     
     private func addMySubView() {
+
         self.addSubview(homeTeam)
         self.addSubview(awayTeam)
         self.addSubview(homeTeamGoals)
         self.addSubview(awayTeamGoals)
         self.addSubview(teamSeparator)
     }
-    
-    private func makeConstraints() {
+    //create constraints for labels
+    private func addConstraints() {
+        
         self.teamSeparator.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         self.teamSeparator.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         self.teamSeparator.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.5).isActive = true
         
         self.homeTeamGoals.topAnchor.constraint(equalTo: teamSeparator.topAnchor).isActive = true
         self.homeTeamGoals.heightAnchor.constraint(equalTo: teamSeparator.heightAnchor).isActive = true
-        self.homeTeamGoals.widthAnchor.constraint(equalToConstant: 30).isActive = true
-        self.homeTeamGoals.trailingAnchor.constraint(equalTo: teamSeparator.leadingAnchor, constant: 10).isActive = true
+        self.homeTeamGoals.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        self.homeTeamGoals.trailingAnchor.constraint(equalTo: teamSeparator.leadingAnchor, constant: 0).isActive = true
         
         self.awayTeamGoals.topAnchor.constraint(equalTo: teamSeparator.topAnchor).isActive = true
         self.awayTeamGoals.heightAnchor.constraint(equalTo: teamSeparator.heightAnchor).isActive = true
-        self.awayTeamGoals.widthAnchor.constraint(equalToConstant: 30).isActive = true
-        self.awayTeamGoals.leadingAnchor.constraint(equalTo: teamSeparator.trailingAnchor, constant: 10).isActive = true
+        self.awayTeamGoals.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        self.awayTeamGoals.leadingAnchor.constraint(equalTo: teamSeparator.trailingAnchor, constant: 3).isActive = true
         
-        self.homeTeam.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
+        self.homeTeam.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15).isActive = true
         self.homeTeam.topAnchor.constraint(equalTo: teamSeparator.topAnchor).isActive = true
         self.homeTeam.heightAnchor.constraint(equalTo: teamSeparator.heightAnchor).isActive = true
-        self.homeTeam.trailingAnchor.constraint(equalTo: homeTeamGoals.leadingAnchor, constant: -10).isActive = true
+        self.homeTeam.trailingAnchor.constraint(equalTo: homeTeamGoals.leadingAnchor, constant: -5).isActive = true
         
-        self.awayTeam.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 10).isActive = true
+        self.awayTeam.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20).isActive = true
         self.awayTeam.topAnchor.constraint(equalTo: teamSeparator.topAnchor).isActive = true
         self.awayTeam.heightAnchor.constraint(equalTo: teamSeparator.heightAnchor).isActive = true
-        self.awayTeam.leadingAnchor.constraint(equalTo: awayTeamGoals.trailingAnchor, constant: -10).isActive = true
+        self.awayTeam.leadingAnchor.constraint(equalTo: awayTeamGoals.trailingAnchor, constant: -4).isActive = true
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
