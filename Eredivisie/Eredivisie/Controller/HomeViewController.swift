@@ -9,14 +9,20 @@
 import UIKit
 
 
-struct ourStruct {
+struct MyDate {
     var time: String!
     var date: String!
 }
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
-    var arrayHeader = [ourStruct]()
+//    var arrayHeader = [ourStruct]()
+    
+    var arrayOfData = [Statistics]()
+    var events: [(MyDate, [Statistics])] = []
+    let format = "yyyy-MM-dd"
+    
+    
     //create image on mainpage
     var mainImageView: UIImageView = {
         let eredivisieImageView = UIImageView()
@@ -33,7 +39,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     override func viewDidLoad() {
-        mainImageViewConstrains()
+        super.viewDidLoad()
+        self.mainImageViewConstrains()
+//        print(formate.date(from: strDate))
+//        let formatter = DateFormatter()
+//        formatter.dateStyle = .short
+//        formatter.timeStyle = .none
+//        formatter.locale = Locale.current
+//        formatter.calendar = Calendar.current
+//        print(formatter.string(from: Date()))
         self.mainImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onEredivisieImageView)))
         
         homeTableView.backgroundColor = UIColor.lightGray
@@ -42,8 +56,30 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         self.homeTableView.register(HomeTableViewCell.self, forCellReuseIdentifier: "cell")
         self.homeTableView.register(CustomHeaderCell.self, forHeaderFooterViewReuseIdentifier: "CustomHeaderCell")
-       arrayHeader = [ourStruct.init(time: "20:00", date: "Sunday, 22.03.2018"), ourStruct.init(time: "21:00", date: "Monday, 23.03.2018"), ourStruct.init(time: "22:00", date: "Tuesday, 24.03.2018")]
-        super.viewDidLoad()
+//       arrayHeader = [ourStruct.init(time: "20:00", date: "Sunday, 22.03.2018"), ourStruct.init(time: "21:00", date: "Monday, 23.03.2018"), ourStruct.init(time: "22:00", date: "Tuesday, 24.03.2018")]
+        Statistics.fetchStatistics {
+            self.arrayOfData = Statistics.allStatistics
+            
+            self.arrayOfData.forEach({ (item) in
+                let date = MyDate(time: item.matchTime, date: item.date)
+                
+                var isAddedToEvents = false
+                
+                for (index, itemEvent) in self.events.enumerated() {
+                    if itemEvent.0.time == date.time && itemEvent.0.date == date.date {
+                        self.events[index].1.append(item)
+                        isAddedToEvents = true
+                        break
+                    }
+                }
+                
+                if !isAddedToEvents {
+                    self.events.append((date, [item]))
+                }
+            })
+            
+            self.homeTableView.reloadData()
+        }
     }
     
     @objc func onEredivisieImageView() {
@@ -79,12 +115,29 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return self.events[section].1.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = homeTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeTableViewCell
 //        cell?.setUpCell()
+        
+        if let homeTeamName = self.events[indexPath.section].1[indexPath.row].homeTeamName {
+            cell.homeTeam.text = homeTeamName
+        }
+        
+        if let awayTeamName = self.events[indexPath.section].1[indexPath.row].awayTeamName {
+            cell.awayTeam.text = awayTeamName
+        }
+        
+        if let homeTeamScore = self.events[indexPath.section].1[indexPath.row].homeTeamScore, let awayTeamScore = self.events[indexPath.section].1[indexPath.row].awayTeamScore {
+            let homeTeamGoals = String(homeTeamScore)
+            let awayTeamGoals = String(awayTeamScore)
+            cell.teamSeparator.text = homeTeamGoals + " : " + awayTeamGoals
+        } else {
+            cell.teamSeparator.text = "  :  "
+        }
+
         return cell
     }
 
@@ -93,34 +146,38 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 100
+        return self.events.count
     }
     
+    //todo
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
+
         let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CustomHeaderCell") as! CustomHeaderCell
+        view.dateLabel.text = self.events[section].0.date
+        view.timeLabel.text = self.events[section].0.time
         
-        if arrayHeader.count > 1 {
-            if section % 3 == 0 {
-                view.dateLabel.text = arrayHeader[0].date
-                view.timeLabel.text = arrayHeader[0].time
-            } else if section % 3 == 1 {
-                view.dateLabel.text = arrayHeader[1].date
-                view.timeLabel.text = arrayHeader[1].time
-            }  else {
-                view.dateLabel.text = arrayHeader[2].date
-                view.timeLabel.text = arrayHeader[2].time
-            }
-        }
-        
+//        if arrayHeader.count > 1 {
+//            if section % 3 == 0 {
+//                view.dateLabel.text = arrayHeader[0].date
+//                view.timeLabel.text = arrayHeader[0].time
+//            } else if section % 3 == 1 {
+//                view.dateLabel.text = arrayHeader[1].date
+//                view.timeLabel.text = arrayHeader[1].time
+//            }  else {
+//                view.dateLabel.text = arrayHeader[2].date
+//                view.timeLabel.text = arrayHeader[2].time
+//            }
+//        }
+    
 //        let view = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 30))
 //        view.backgroundColor = UIColor.orange
-//        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HomeTableViewCell") as! CustomHeaderCell
-//        let headerView = Bundle.main.loadNibNamed("CustomHeaderCell", owner: self, options: nil)?.first as! CustomHeaderCell
-        // headerView.timeLabel.text = arrayHeader[section].time
-      //  headerView.dateLabel.text = arrayHeader[section].date
+//            let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HomeTableViewCell") as! CustomHeaderCell
+//            let headerView = Bundle.main.loadNibNamed("CustomHeaderCell", owner: self, options: nil)?.first as! CustomHeaderCell
+//            headerView.timeLabel.text = arrayHeader[section].time
+//            headerView.dateLabel.text = arrayHeader[section].date
 //
 //        return headerView
+        
         return view
     }
     

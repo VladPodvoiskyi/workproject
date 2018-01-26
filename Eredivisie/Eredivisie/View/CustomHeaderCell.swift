@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import Foundation
+import Alamofire
+
+
 // create 2 label for headerCell
 class CustomHeaderCell: UITableViewHeaderFooterView {
 
@@ -63,6 +67,11 @@ class CustomHeaderCell: UITableViewHeaderFooterView {
         self.dateLabel.trailingAnchor.constraint(equalTo: baseView.trailingAnchor).isActive = true
         self.dateLabel.topAnchor.constraint(equalTo: self.timeLabel.topAnchor).isActive = true
         self.dateLabel.heightAnchor.constraint(equalTo: self.timeLabel.heightAnchor).isActive = true
+    }
+    
+    func setup(with statistics: Statistics) {
+        timeLabel.text = "\(statistics.matchTime!)"
+        dateLabel.text = "\(statistics.date)"
     }
     
     override func awakeFromNib() {
