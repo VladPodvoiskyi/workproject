@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 
 struct MyDate {
@@ -20,8 +21,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var arrayOfData = [Statistics]()
     var events: [(MyDate, [Statistics])] = []
-    let format = "yyyy-MM-dd"
+    var selectedIndex = -1
     
+//    var startSelection: String {
+////        var selection = self.arrayOfData.
+//    }
     
     //create image on mainpage
     var mainImageView: UIImageView = {
@@ -41,13 +45,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mainImageViewConstrains()
-//        print(formate.date(from: strDate))
-//        let formatter = DateFormatter()
-//        formatter.dateStyle = .short
-//        formatter.timeStyle = .none
-//        formatter.locale = Locale.current
-//        formatter.calendar = Calendar.current
-//        print(formatter.string(from: Date()))
+
         self.mainImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onEredivisieImageView)))
         
         homeTableView.backgroundColor = UIColor.lightGray
@@ -57,7 +55,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.homeTableView.register(HomeTableViewCell.self, forCellReuseIdentifier: "cell")
         self.homeTableView.register(CustomHeaderCell.self, forHeaderFooterViewReuseIdentifier: "CustomHeaderCell")
 //       arrayHeader = [ourStruct.init(time: "20:00", date: "Sunday, 22.03.2018"), ourStruct.init(time: "21:00", date: "Monday, 23.03.2018"), ourStruct.init(time: "22:00", date: "Tuesday, 24.03.2018")]
-        Statistics.fetchStatistics {
+
+        //TODO it will be imolemented
+        RequestNetworkManager.fetchEvents(dateFrom: dateFromURL, dateTo: dateToURL, leagueID: HollandLeagueID, handler: {
             self.arrayOfData = Statistics.allStatistics
             
             self.arrayOfData.forEach({ (item) in
@@ -79,7 +79,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             })
             
             self.homeTableView.reloadData()
-        }
+        })
     }
     
     @objc func onEredivisieImageView() {
@@ -122,6 +122,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = homeTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeTableViewCell
 //        cell?.setUpCell()
         
+        
         if let homeTeamName = self.events[indexPath.section].1[indexPath.row].homeTeamName {
             cell.homeTeam.text = homeTeamName
         }
@@ -138,12 +139,30 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.teamSeparator.text = "  :  "
         }
 
+        if self.events[indexPath.section].1[indexPath.row].matchStatus.isEmpty {
+            
+        }
+        
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == selectedIndex {
+            selectedIndex = -1
+        } else {
+            selectedIndex = indexPath.row
+        }
+        tableView.reloadData()
+    }
 
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        if indexPath.row == selectedIndex{
+            return self.homeTableView.frame.size.height / 11
+        } else {
         return self.homeTableView.frame.size.height / 22
     }
+}
    
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.events.count
@@ -156,18 +175,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         view.dateLabel.text = self.events[section].0.date
         view.timeLabel.text = self.events[section].0.time
         
-//        if arrayHeader.count > 1 {
-//            if section % 3 == 0 {
-//                view.dateLabel.text = arrayHeader[0].date
-//                view.timeLabel.text = arrayHeader[0].time
-//            } else if section % 3 == 1 {
-//                view.dateLabel.text = arrayHeader[1].date
-//                view.timeLabel.text = arrayHeader[1].time
-//            }  else {
-//                view.dateLabel.text = arrayHeader[2].date
-//                view.timeLabel.text = arrayHeader[2].time
-//            }
-//        }
+        
+        
     
 //        let view = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 30))
 //        view.backgroundColor = UIColor.orange
@@ -180,6 +189,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return view
     }
+    
+//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        let translationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 400, 0)
+//        cell.layer.transform = translationTransform
+//        
+//        UIView.animate(withDuration: 1, delay: 0.2 * Double(indexPath.row), options: .curveEaseInOut, animations:
+//            {
+//                cell.layer.transform = CATransform3DIdentity
+//        })
+//    }
     
 //    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 //        let showStatics = showStaticsAction(at: indexPath)

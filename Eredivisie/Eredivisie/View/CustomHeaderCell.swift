@@ -40,6 +40,7 @@ class CustomHeaderCell: UITableViewHeaderFooterView {
         
         return view
     }()
+
     
     private func makeView() {
         addMySubView()

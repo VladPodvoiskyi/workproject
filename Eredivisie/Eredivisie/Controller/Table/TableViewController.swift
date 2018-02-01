@@ -21,9 +21,10 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        self.tableView.backgroundColor = .clear
         self.tableView.isScrollEnabled = false
         
-        Team.fetchTeams(handler: {
+        RequestNetworkManager.fetchTeams(leagueID: HollandLeagueID, handler: {
             self.teams = Team.allTeams
             self.teams.sort(by: { first, second in
                 return first.overallPoints > second.overallPoints
@@ -32,6 +33,14 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         })
         self.tableModeSegmentedControl.selectedSegmentIndex = 1
         // Do any additional setup after loading the view.
+        let colorTop = UIColor.orange.cgColor
+        let colorMiddle = UIColor.white.cgColor
+        let colorMiddle1 = UIColor.white.cgColor
+        let colorBottom = UIColor.blue.cgColor
+        
+        let colorsArray = [colorTop, colorMiddle, colorMiddle1, colorBottom]
+        
+        self.view.setGradientBackgroundUniversal(colors: colorsArray, start: CGPoint(x: 0, y: 0), end: CGPoint(x: 1, y: 1))
     }
     
     
@@ -42,17 +51,19 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "teamCell") as! TableCell
-
-        switch self.tableModeSegmentedControl.selectedSegmentIndex {
-        case 0:
-            cell.homeConfigureCell(forecast: self.teams[indexPath.row])
-        case 1:
-            cell.configureCell(forecast: self.teams[indexPath.row])
-        case 2:
-            cell.awayConfigureCell(forecast: self.teams[indexPath.row])
-        default:
-            cell.configureCell(forecast: self.teams[indexPath.row])
-        }
+        
+        cell.configureCell(forecast: self.teams[indexPath.row].createViewModel(with: Mode(rawValue: self.tableModeSegmentedControl.selectedSegmentIndex)!))
+//        cell.configureCell(forecast: self.teams[indexPath.row], mode: TeamViewModel(rawValue: self.tableModeSegmentedControl.selectedSegmentIndex))
+//        switch self.tableModeSegmentedControl.selectedSegmentIndex {
+//        case 0:
+//            cell.homeConfigureCell(forecast: self.teams[indexPath.row])
+//        case 1:
+//            cell.configureCell(forecast: self.teams[indexPath.row])
+//        case 2:
+//            cell.awayConfigureCell(forecast: self.teams[indexPath.row])
+//        default:
+//            cell.configureCell(forecast: self.teams[indexPath.row])
+//        }
         
         cell.positionCell.text = String(indexPath.row + 1)
         
@@ -60,8 +71,25 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.tableView.frame.size.height / 18
+        return self.tableView.frame.size.height / CGFloat(self.teams.count + 1)
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let translationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 400, 0)
+        cell.layer.transform = translationTransform
+        
+        UIView.animate(withDuration: 1, delay: 0.05 * Double(indexPath.row), options: .curveEaseInOut, animations:
+            {
+            cell.layer.transform = CATransform3DIdentity
+        })
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = tableView.dequeueReusableCell(withIdentifier: "teamCell") as! TableCell
+        
+        return view
+    }
+    
     
     @IBAction func segmentedControl(_ sender: UISegmentedControl) {
      
