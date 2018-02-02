@@ -21,7 +21,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var arrayOfData = [Statistics]()
     var events: [(MyDate, [Statistics])] = []
-    var selectedIndex = -1
+    
     
 //    var startSelection: String {
 ////        var selection = self.arrayOfData.
@@ -50,11 +50,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         homeTableView.backgroundColor = UIColor.lightGray
         
-//        self.homeTableView.reloadData()
-        
         self.homeTableView.register(HomeTableViewCell.self, forCellReuseIdentifier: "cell")
         self.homeTableView.register(CustomHeaderCell.self, forHeaderFooterViewReuseIdentifier: "CustomHeaderCell")
-//       arrayHeader = [ourStruct.init(time: "20:00", date: "Sunday, 22.03.2018"), ourStruct.init(time: "21:00", date: "Monday, 23.03.2018"), ourStruct.init(time: "22:00", date: "Tuesday, 24.03.2018")]
 
         //TODO it will be imolemented
         RequestNetworkManager.fetchEvents(dateFrom: dateFromURL, dateTo: dateToURL, leagueID: HollandLeagueID, handler: {
@@ -146,23 +143,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == selectedIndex {
-            selectedIndex = -1
-        } else {
-            selectedIndex = indexPath.row
-        }
-        tableView.reloadData()
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if indexPath.row == selectedIndex {
+//            selectedIndex = -1
+//        } else {
+//            selectedIndex = indexPath.row
+//        }
+//        tableView.reloadData()
+//    }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        if indexPath.row == selectedIndex{
-            return self.homeTableView.frame.size.height / 11
-        } else {
         return self.homeTableView.frame.size.height / 22
     }
-}
+
    
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.events.count
@@ -175,30 +169,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         view.dateLabel.text = self.events[section].0.date
         view.timeLabel.text = self.events[section].0.time
         
-        
-        
-    
-//        let view = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 30))
-//        view.backgroundColor = UIColor.orange
-//            let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HomeTableViewCell") as! CustomHeaderCell
-//            let headerView = Bundle.main.loadNibNamed("CustomHeaderCell", owner: self, options: nil)?.first as! CustomHeaderCell
-//            headerView.timeLabel.text = arrayHeader[section].time
-//            headerView.dateLabel.text = arrayHeader[section].date
-//
-//        return headerView
-        
         return view
     }
     
-//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        let translationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 400, 0)
-//        cell.layer.transform = translationTransform
-//        
-//        UIView.animate(withDuration: 1, delay: 0.2 * Double(indexPath.row), options: .curveEaseInOut, animations:
-//            {
-//                cell.layer.transform = CATransform3DIdentity
-//        })
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        let controler = self.storyboard?.instantiateViewController(withIdentifier: "MatchDetails") as! MatchDetailsViewController
+        controler.statistics = self.events[indexPath.section].1[indexPath.row]
+        self.navigationController?.pushViewController(controler, animated: true)
+        
+    }
     
 //    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 //        let showStatics = showStaticsAction(at: indexPath)

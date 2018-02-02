@@ -35,23 +35,6 @@ class Statistics {
         self.awayTeamScore = Int(statDict["match_awayteam_score"] as? String ?? "")
     }
     
-//    static func fetchStatistics(handler: @escaping() -> Void) {
-//        let getStatisticsURL = URL(string: GET_STATISTICS_URL)!
-//        print(getStatisticsURL.description)
-//        Alamofire.SessionManager.default.requestWithoutCache(getStatisticsURL).responseJSON {
-//            (response) in
-//            let result = response.result
-//            if let dictStatistics = result.value as? [Dictionary<String, AnyObject>] {
-//                for statDictionary in dictStatistics {
-//                    let statistics = Statistics(statDict: statDictionary)
-//                    Statistics.allStatistics.append(statistics)
-//                }
-//                print(dictStatistics)
-//                handler()
-//            }
-//        }
-//    }
-    
 }
 
 
