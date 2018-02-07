@@ -15,10 +15,13 @@
 		CE3418C520206A04008BA918 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3418C420206A04008BA918 /* RequestManager.swift */; };
 		CE3418C720206B07008BA918 /* RequestNetworkManager+Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3418C620206B07008BA918 /* RequestNetworkManager+Table.swift */; };
 		CE3418C92020702A008BA918 /* RequestNetworkManager+HomeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3418C82020702A008BA918 /* RequestNetworkManager+HomeTable.swift */; };
+		CE3A2589202AE08600900901 /* MatchDetailsModel + Statictics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A2588202AE08600900901 /* MatchDetailsModel + Statictics.swift */; };
+		CE3A258B202AEEAF00900901 /* RequestNetworkManager + Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A258A202AEEAF00900901 /* RequestNetworkManager + Statistics.swift */; };
 		CE3A68B2201897A6000CB942 /* CustomHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A68B1201897A6000CB942 /* CustomHeaderCell.swift */; };
 		CE3FF828202309EB00C35B37 /* MatchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3FF827202309EB00C35B37 /* MatchDetailsViewController.swift */; };
 		CE3FFFD720247D3C0005FE4C /* MatchDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3FFFD620247D3C0005FE4C /* MatchDetailsModel.swift */; };
 		CE3FFFDC202494270005FE4C /* MatchDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3FFFDB202494270005FE4C /* MatchDetailsCell.swift */; };
+		CE411DD22029CCB1005441DB /* CustomHeaderMatchDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE411DD12029CCB1005441DB /* CustomHeaderMatchDetailsCell.swift */; };
 		CE4140EA2021BBB4006B3EA1 /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4140E92021BBB4006B3EA1 /* TeamViewModel.swift */; };
 		CE4140EC2021EAB0006B3EA1 /* ViewsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4140EB2021EAB0006B3EA1 /* ViewsExtension.swift */; };
 		CE41C94E2010EF7C00193719 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE41C94D2010EF7C00193719 /* Home.storyboard */; };
@@ -33,6 +36,7 @@
 		CE69BB842004E1BE00844D53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE69BB832004E1BE00844D53 /* Assets.xcassets */; };
 		CE69BB872004E1BE00844D53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE69BB852004E1BE00844D53 /* LaunchScreen.storyboard */; };
 		CE816FCF2015E35400B9D65C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE816FCE2015E35400B9D65C /* HomeTableViewCell.swift */; };
+		CE82A9512028BE8400014F25 /* MatchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82A9502028BE8400014F25 /* MatchDetailsView.swift */; };
 		CEDF5C992011E31800D2123F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5C982011E31800D2123F /* MainViewController.swift */; };
 		CEDF5C9C2012173800D2123F /* Alamofire+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5C9B2012173800D2123F /* Alamofire+Custom.swift */; };
 		CEDF5C9E20121C7D00D2123F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF5C9D20121C7D00D2123F /* HomeViewController.swift */; };
@@ -48,10 +52,13 @@
 		CE3418C420206A04008BA918 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		CE3418C620206B07008BA918 /* RequestNetworkManager+Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestNetworkManager+Table.swift"; sourceTree = "<group>"; };
 		CE3418C82020702A008BA918 /* RequestNetworkManager+HomeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestNetworkManager+HomeTable.swift"; sourceTree = "<group>"; };
+		CE3A2588202AE08600900901 /* MatchDetailsModel + Statictics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchDetailsModel + Statictics.swift"; sourceTree = "<group>"; };
+		CE3A258A202AEEAF00900901 /* RequestNetworkManager + Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestNetworkManager + Statistics.swift"; sourceTree = "<group>"; };
 		CE3A68B1201897A6000CB942 /* CustomHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderCell.swift; sourceTree = "<group>"; };
 		CE3FF827202309EB00C35B37 /* MatchDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewController.swift; sourceTree = "<group>"; };
 		CE3FFFD620247D3C0005FE4C /* MatchDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsModel.swift; sourceTree = "<group>"; };
 		CE3FFFDB202494270005FE4C /* MatchDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsCell.swift; sourceTree = "<group>"; };
+		CE411DD12029CCB1005441DB /* CustomHeaderMatchDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderMatchDetailsCell.swift; sourceTree = "<group>"; };
 		CE4140E92021BBB4006B3EA1 /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
 		CE4140EB2021EAB0006B3EA1 /* ViewsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsExtension.swift; sourceTree = "<group>"; };
 		CE41C94D2010EF7C00193719 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -68,6 +75,7 @@
 		CE69BB862004E1BE00844D53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE69BB882004E1BE00844D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE816FCE2015E35400B9D65C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		CE82A9502028BE8400014F25 /* MatchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsView.swift; sourceTree = "<group>"; };
 		CEDF5C982011E31800D2123F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CEDF5C9B2012173800D2123F /* Alamofire+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Custom.swift"; sourceTree = "<group>"; };
 		CEDF5C9D20121C7D00D2123F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +156,8 @@
 				CE816FCE2015E35400B9D65C /* HomeTableViewCell.swift */,
 				CE3A68B1201897A6000CB942 /* CustomHeaderCell.swift */,
 				CE3FFFDB202494270005FE4C /* MatchDetailsCell.swift */,
+				CE82A9502028BE8400014F25 /* MatchDetailsView.swift */,
+				CE411DD12029CCB1005441DB /* CustomHeaderMatchDetailsCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -159,6 +169,7 @@
 				CE2DBAFA2019F66D00BE0C10 /* Statistics.swift */,
 				CE4140E92021BBB4006B3EA1 /* TeamViewModel.swift */,
 				CE3FFFD620247D3C0005FE4C /* MatchDetailsModel.swift */,
+				CE3A2588202AE08600900901 /* MatchDetailsModel + Statictics.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,6 +210,7 @@
 				CEDF5C9B2012173800D2123F /* Alamofire+Custom.swift */,
 				CE3418C620206B07008BA918 /* RequestNetworkManager+Table.swift */,
 				CE3418C82020702A008BA918 /* RequestNetworkManager+HomeTable.swift */,
+				CE3A258A202AEEAF00900901 /* RequestNetworkManager + Statistics.swift */,
 				CE4140EB2021EAB0006B3EA1 /* ViewsExtension.swift */,
 			);
 			path = Extensions;
@@ -351,11 +363,14 @@
 				CE3A68B2201897A6000CB942 /* CustomHeaderCell.swift in Sources */,
 				CEDF5C9C2012173800D2123F /* Alamofire+Custom.swift in Sources */,
 				CE4232FC20060AAE00E01DDA /* TableViewController.swift in Sources */,
+				CE82A9512028BE8400014F25 /* MatchDetailsView.swift in Sources */,
+				CE3A258B202AEEAF00900901 /* RequestNetworkManager + Statistics.swift in Sources */,
 				CE69BB822004E1BE00844D53 /* Eredivisie.xcdatamodeld in Sources */,
 				CE2DBAFB2019F66D00BE0C10 /* Statistics.swift in Sources */,
 				CE3FFFDC202494270005FE4C /* MatchDetailsCell.swift in Sources */,
 				CE3418C720206B07008BA918 /* RequestNetworkManager+Table.swift in Sources */,
 				CE27EBA62006352C0045F9A6 /* TableCell.swift in Sources */,
+				CE411DD22029CCB1005441DB /* CustomHeaderMatchDetailsCell.swift in Sources */,
 				CE460094201F42C5004D5B0D /* CoreDataStack.swift in Sources */,
 				CE816FCF2015E35400B9D65C /* HomeTableViewCell.swift in Sources */,
 				CEDF5C9E20121C7D00D2123F /* HomeViewController.swift in Sources */,
@@ -364,6 +379,7 @@
 				CE1695652005091300E3BAE8 /* Team.swift in Sources */,
 				CE1695632005053F00E3BAE8 /* Constants.swift in Sources */,
 				CE4140EC2021EAB0006B3EA1 /* ViewsExtension.swift in Sources */,
+				CE3A2589202AE08600900901 /* MatchDetailsModel + Statictics.swift in Sources */,
 				CEDF5C992011E31800D2123F /* MainViewController.swift in Sources */,
 				CE4140EA2021BBB4006B3EA1 /* TeamViewModel.swift in Sources */,
 				CE3FFFD720247D3C0005FE4C /* MatchDetailsModel.swift in Sources */,

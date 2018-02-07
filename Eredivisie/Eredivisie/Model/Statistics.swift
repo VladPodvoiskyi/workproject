@@ -23,7 +23,7 @@ class Statistics {
     var awayTeamScore: Int!
   //  var homeTeamHalfTimeScore: Int!
    // var awayTeamHalfTimeScore: Int!
-    
+    var events: [HaveTime]!
     
     init (statDict: Dictionary<String, AnyObject>) {
         self.date = statDict["match_date"] as? String
@@ -33,6 +33,7 @@ class Statistics {
         self.awayTeamName = statDict["match_awayteam_name"] as? String
         self.homeTeamScore = Int(statDict["match_hometeam_score"] as? String ?? "")
         self.awayTeamScore = Int(statDict["match_awayteam_score"] as? String ?? "")
+        
     }
     
 }

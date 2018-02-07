@@ -130,8 +130,6 @@ class HomeTableViewCell: UITableViewCell {
 
         homeTeam.text = "\(statistics.homeTeamName)"
         awayTeam.text = "\(statistics.awayTeamName)"
-//        homeTeamGoals.text = "\(statistics.homeTeamScore)"
-//        awayTeamGoals.text = "\(statistics.awayTeamScore)"
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

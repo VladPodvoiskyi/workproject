@@ -86,6 +86,8 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = tableView.dequeueReusableCell(withIdentifier: "teamCell") as! TableCell
+
+        view.setContentHeaderForTableView()
         
         return view
     }

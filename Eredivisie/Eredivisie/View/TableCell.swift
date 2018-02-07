@@ -65,5 +65,17 @@ class TableCell: UITableViewCell {
 //        goalDifferenceCell.text = "\(forecast.overallGoalsScored - forecast.overallMissedGoals)"
 //        pointsCell.text = "\(forecast.overallPoints)"
 //    }
+}
 
+extension TableCell {
+    func setContentHeaderForTableView() {
+        self.positionCell.text = "P"
+        self.teamCell.text = "Team"
+        self.gameCell.text = "G"
+        self.winCell.text = "W"
+        self.loseCell.text = "L"
+        self.drawCell.text = "D"
+        self.goalDifferenceCell.text = "GD"
+        self.pointsCell.text = "P"
+    }
 }

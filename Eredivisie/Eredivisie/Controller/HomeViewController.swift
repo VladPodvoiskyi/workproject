@@ -21,6 +21,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var arrayOfData = [Statistics]()
     var events: [(MyDate, [Statistics])] = []
+    var refresh = UIRefreshControl()
     
     
 //    var startSelection: String {
@@ -38,7 +39,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return eredivisieImageView
     }()
     
-    var homeTableView = UITableView ()
+    var homeTableView = UITableView()
     var homeTableViewCell = UITableViewCell()
     
     
@@ -52,6 +53,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         self.homeTableView.register(HomeTableViewCell.self, forCellReuseIdentifier: "cell")
         self.homeTableView.register(CustomHeaderCell.self, forHeaderFooterViewReuseIdentifier: "CustomHeaderCell")
+        
+        self.refresh.addTarget(self, action: #selector(handelRefresh), for: .valueChanged)
+        self.refresh.tintColor = UIColor.yellow
+        homeTableView.addSubview(refresh)
 
         //TODO it will be imolemented
         RequestNetworkManager.fetchEvents(dateFrom: dateFromURL, dateTo: dateToURL, leagueID: HollandLeagueID, handler: {
@@ -77,6 +82,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             self.homeTableView.reloadData()
         })
+    }
+
+    
+    @objc func handelRefresh() {
+        refresh.endRefreshing()
     }
     
     @objc func onEredivisieImageView() {
@@ -179,14 +189,5 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationController?.pushViewController(controler, animated: true)
         
     }
-    
-//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//        let showStatics = showStaticsAction(at: indexPath)
-//        let reminder = reminderAction(at: indexPath)
-//        
-//        return UISwipeActionsConfiguration(action: [showStatics, reminder])
-//    }
-//    
-//    func showStatisticsAction
-//    
+       
 }
