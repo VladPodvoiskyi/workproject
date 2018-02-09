@@ -20,7 +20,7 @@ class MatchDetailsView: UIView {
         homeTeamImageView.translatesAutoresizingMaskIntoConstraints = false
         homeTeamImageView.contentMode = .scaleToFill
         homeTeamImageView.backgroundColor = .red
-        homeTeamImageView.layer.cornerRadius = 38
+        homeTeamImageView.layer.cornerRadius = 45
         homeTeamImageView.layer.masksToBounds = true
         
         return homeTeamImageView
@@ -86,6 +86,9 @@ class MatchDetailsView: UIView {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.isScrollEnabled = true
+        tableView.separatorStyle = .singleLine
+        tableView.tableFooterView = UIView()
+        tableView.backgroundColor = .clear
         tableView.register(MatchDetailsCell.self, forCellReuseIdentifier: "detailCell")
     
         return tableView
@@ -141,7 +144,7 @@ class MatchDetailsView: UIView {
         matchDetailsTeamHomeLabel.widthAnchor.constraint(equalToConstant: 170).isActive = true
         matchDetailsTeamHomeLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
         matchDetailsTeamHomeLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 310).isActive = true
-        matchDetailsTeamHomeLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30).isActive = true
+        matchDetailsTeamHomeLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20).isActive = true
         
         
         //        create constraints for matchDetailsTeamAwayLabel
@@ -149,13 +152,13 @@ class MatchDetailsView: UIView {
         matchDetailsTeamAwayLabel.widthAnchor.constraint(equalToConstant: 170).isActive = true
         matchDetailsTeamAwayLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
         matchDetailsTeamAwayLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 310).isActive = true
-        matchDetailsTeamAwayLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -30).isActive = true
+        matchDetailsTeamAwayLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20).isActive = true
         
         
         //        create constraints for matchDetailsTableView
         self.addSubview(matchDetailsTableView)
-        matchDetailsTableView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
-        matchDetailsTableView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
+        matchDetailsTableView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5).isActive = true
+        matchDetailsTableView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5).isActive = true
         matchDetailsTableView.topAnchor.constraint(equalTo: self.topAnchor, constant: 350).isActive = true
         matchDetailsTableView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         

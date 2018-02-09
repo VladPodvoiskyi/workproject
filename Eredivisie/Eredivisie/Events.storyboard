@@ -10,20 +10,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Events View Controller-->
         <scene sceneID="YGT-P8-vDJ">
             <objects>
-                <viewController id="wao-Ny-0lr" sceneMemberID="viewController">
+                <viewController id="wao-Ny-0lr" customClass="EventsViewController" customModule="Eredivisie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cyu-3a-669">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.31113094091415405" green="0.95691365003585815" blue="0.075108878314495087" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="nxB-D3-59s"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nH5-eU-C4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-81" y="763"/>
+            <point key="canvasLocation" x="-82.400000000000006" y="762.36881559220399"/>
         </scene>
     </scenes>
 </document>

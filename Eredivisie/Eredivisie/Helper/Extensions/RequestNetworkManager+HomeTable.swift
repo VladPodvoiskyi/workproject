@@ -11,9 +11,35 @@ import Alamofire
 
 extension RequestNetworkManager {
     
+    static func convertToURL(Dict: [String: String]) -> String {
+        var url = ""
+        for (urlParam, urlValue) in Dict {
+            let paramAndValue = urlParam + urlValue + "&"
+            url += paramAndValue
+        }
+        url = baseURL + url + API_KEY
+        return url
+    }
+    
     static func fetchEvents(dateFrom: String, dateTo: String, leagueID: String, handler: @escaping () -> Void ) {
-        let url = URL(string: RequestNetworkManager.createURL(withParameters: ACTION + "get_events" + "&" + DATE_FROM + dateFrom + "&" + DATE_TO + dateTo + "&" + LEAGUE_ID + leagueID))
-        Alamofire.SessionManager.default.requestWithoutCache(url!).responseJSON { (response) in
+ //       let dictURL = ["action=": "get_events", "date_from=": "2017-08-01", "date_to=": "2018-06-01", "league_id=": "137"]
+//        let url = URL(string: RequestNetworkManager.createURL(withParameters: ACTION + "get_events" + "&" + DATE_FROM + dateFrom + "&" + DATE_TO + dateTo + "&" + LEAGUE_ID + leagueID))
+        
+        let dictURL = ["action=" : "get_events", "from=" : "2017-08-01", "to=" : "2018-06-01", "league_id=" : "137"]
+        
+//        func convertToURL(Dict: [String: String]) -> String {
+//            var url = ""
+//            for (urlParam, urlValue) in Dict {
+//                let paramAndValue = urlParam + urlValue + "&"
+//                url += paramAndValue
+//            }
+//            url = baseURL + url + API_KEY
+//            return url
+//        }
+        
+//        print(convertToURL(Dict: dictURL))
+        
+        Alamofire.SessionManager.default.requestWithoutCache(convertToURL(Dict: dictURL)).responseJSON { (response) in
             let result = response.result
             if let dictLeague = result.value as? [Dictionary<String, AnyObject>] {
                 for dictStat in dictLeague {
@@ -37,7 +63,7 @@ extension RequestNetworkManager {
                 for goalScorer in goalscorerInNet {
                     let goalscorer = GoalScorer()
                     if let time = goalScorer["time"] as? String {
-                        goalscorer.time = time
+                        goalscorer.timeEvent = time
                     }
                     if let score = goalScorer["score"] as? String {
                         goalscorer.score = score
@@ -58,7 +84,7 @@ extension RequestNetworkManager {
             for card in cardsInNet {
                 let cardScorer = Card()
                 if let time = card["time"] as? String {
-                    cardScorer.time = time
+                    cardScorer.timeEvent = time
                 }
                 if let homeFault = card["home_fault"] as? String {
                     cardScorer.homeFault = homeFault
@@ -77,44 +103,5 @@ extension RequestNetworkManager {
     }
 }
 
-//https://apifootball.com/api/?
-
-
-//func fetchEvents(completion: ([])) {
-//    static let ACTION = "action="
-//    static let LEAGUE_ID = "league_id="
-//    static let DATE_FROM = "from="
-//    static let DATE_TO = "to="
-//}
-//// With Alamofire
-//func fetchAllRooms(completion: ([RemoteRoom]?) -> Void) {
-//let dictionary = ["ACTION": "action=", "get_events": "get_events&", "date_from": "from=2017-08-01&", "date_to": "to=2018-06-01&,]
-//    Alamofire.request(
-//        .GET,
-//        "http://localhost:5984/rooms/_all_docs",
-//        parameters: ["include_docs": "true", "action": "ACTION", "get_events": "get_events&"],
-//        encoding: .URL)
-//        .validate()
-//        .responseJSON { (response) -> Void in
-//            guard response.result.isSuccess else {
-//                print("Error while fetching remote rooms: \(response.result.error)")
-//                completion(nil)
-//                return
-//            }
-//
-//            guard let value = response.result.value as? [String: AnyObject],
-//                rows = value["rows"] as? [[String: AnyObject]] else {
-//                    print("Malformed data received from fetchAllRooms service")
-//                    completion(nil)
-//                    return
-//            }
-//
-//            var rooms = [RemoteRoom]()
-//            for roomDict in rows {
-//                rooms.append(RemoteRoom(jsonData: roomDict))
-//            }
-//
-//            completion(rooms)
-//    }
-//}
+//https://apifootball.com/api/?action=get_events&from=2017-08-01&to=2018-06-01&league_id=137&APIkey=9f4888d8b7f21dac93a851d0c291266fe884da492fba995dbdf59789347e913d
 

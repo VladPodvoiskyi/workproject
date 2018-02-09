@@ -14,6 +14,9 @@ class MatchDetailsViewController: UIViewController {
     var statistics: Statistics!
     var customView: MatchDetailsView!
     var matchStatistics: MatchDetailsCell!
+    var headerMatchStatistics: CustomHeaderMatchDetailsCell!
+    
+    var finalEventsArray = [HaveTime]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +25,31 @@ class MatchDetailsViewController: UIViewController {
         setupSettingsTableView()
         self.setup(with: statistics)
         // Do any additional setup after loading the view.
-        RequestNetworkManager.fetchEventsNew(dateFrom: RequestNetworkManager.DATE_FROM, dateTo: RequestNetworkManager.DATE_TO, leagueID: RequestNetworkManager.LEAGUE_ID) {
+        RequestNetworkManager.fetchEvents(dateFrom: RequestNetworkManager.DATE_FROM, dateTo: RequestNetworkManager.DATE_TO, leagueID: RequestNetworkManager.LEAGUE_ID) {
             
         }
+        
+        finalEventsArray = getEventsWithTime(events: statistics.events)
     }
+    
  /////-------------------------------------------------------------------------------------------------------------/////////
+    
+    private func getEventsWithTime (events: [HaveTime]) -> [HaveTime] {
+        let arrayWithTime = statistics.events.filter({$0.timeEvent != ""})
+        
+        let finalArray: [HaveTime] = arrayWithTime.sorted { (time1, time2) -> Bool in
+            let time1Int = time1.timeEvent?.replacingOccurrences(of: "'", with: "")
+            let time2Int = time2.timeEvent?.replacingOccurrences(of: "'", with: "")
+            if let t1 = time1Int, let t2 = time2Int {
+                if let tInt1 = Int(t1), let tInt2 = Int(t2) {
+                    return tInt1 < tInt2
+                }
+            }
+            return true
+        }
+        return finalArray
+    }
+    
     
     func setupSettingsTableView() {
         customView.matchDetailsTableView.dataSource = self
@@ -53,12 +76,7 @@ extension MatchDetailsViewController: UITableViewDelegate {
 //MARK - UITableViewDataSource
 
 extension MatchDetailsViewController: UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        
-//        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "MatchDetailsCell") as! MatchDetailsCell
-//        
-//        return view
-//    }
+
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 45
@@ -67,7 +85,8 @@ extension MatchDetailsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = customView.matchDetailsTableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath) as! MatchDetailsCell
 
-        if let goal = statistics.events[indexPath.row] as? GoalScorer {
+//        if let goal = statistics.events[indexPath.row] as? GoalScorer {
+                if let goal = finalEventsArray[indexPath.row] as? GoalScorer {
             if let home = goal.homeScorer {
                 if (!home.isEmpty) {
                     cell.playerHome.text = home
@@ -87,12 +106,13 @@ extension MatchDetailsViewController: UITableViewDataSource {
             }
             
 //            if let time = goal.time {
-//                cell.minuteOfEvents.text = time
+//               cell.minuteOfEvents.text = time
 //            }
             
         }
         
-        if let card = statistics.events[indexPath.row] as? Card {
+//        if let card = statistics.events[indexPath.row] as? Card {
+        if let card = finalEventsArray[indexPath.row] as? Card {
             if let home = card.homeFault {
                 if (!home.isEmpty) {
                     cell.playerHome.text = home
@@ -119,27 +139,24 @@ extension MatchDetailsViewController: UITableViewDataSource {
                 }
             }
         }
-//        if let time = statistics.events[indexPath.row].time {
-//            cell.minuteOfEvents.text = time
-//        }
+//                if let time = statistics.events[indexPath.row].timeEvent {
+                if let time = finalEventsArray[indexPath.row].timeEvent {
+                    cell.minuteOfEvents.text = time
+//                    if let timeSort = time.sorted
+                    
+                }
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return statistics.events.count
+//        return statistics.events.count
+        return finalEventsArray.count
     }
     
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        
-//        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CustomHeaderMatchDetailsCell") as! CustomHeaderMatchDetailsCell
-//        
-//        view.headerLabel.text = self.
-////        view.dateLabel.text = self.events[section].0.date
-//        
-//        return view
-//    }
-    
-    
-    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CustomHeaderMatchDetailsCell!
+        
+        return cell
+    }
 }

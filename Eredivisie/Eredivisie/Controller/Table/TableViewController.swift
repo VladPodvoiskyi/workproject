@@ -22,7 +22,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.backgroundColor = .clear
-        self.tableView.isScrollEnabled = false
+        self.tableView.isScrollEnabled = true
         
         RequestNetworkManager.fetchTeams(leagueID: HollandLeagueID, handler: {
             self.teams = Team.allTeams

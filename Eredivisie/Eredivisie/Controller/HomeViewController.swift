@@ -10,6 +10,7 @@ import UIKit
 import Foundation
 
 
+
 struct MyDate {
     var time: String!
     var date: String!
@@ -57,6 +58,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.refresh.addTarget(self, action: #selector(handelRefresh), for: .valueChanged)
         self.refresh.tintColor = UIColor.yellow
         homeTableView.addSubview(refresh)
+        
 
         //TODO it will be imolemented
         RequestNetworkManager.fetchEvents(dateFrom: dateFromURL, dateTo: dateToURL, leagueID: HollandLeagueID, handler: {
@@ -79,7 +81,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     self.events.append((date, [item]))
                 }
             })
-            
             self.homeTableView.reloadData()
         })
     }
@@ -153,14 +154,37 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if indexPath.row == selectedIndex {
-//            selectedIndex = -1
-//        } else {
-//            selectedIndex = indexPath.row
-//        }
-//        tableView.reloadData()
+    
+//    private func filterDate() {
+//        let date : Date = Date()
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "yyyy-MM-dd"
+//        
+//        let todayDate = dateFormatter.string(from: date)
+//        let pastDate = todayDate.dateByAddingTimeInterval(-360*24)
+//        
+//        let dateNew = Statistics.allStatistics
+//        let tableDate = dateNew
+//        
+//        print(todayDate)
 //    }
+    
+//    private func getEventsWithTime (events: [HaveTime]) -> [HaveTime] {
+//        let arrayWithTime = statistics.events.filter({$0.timeEvent != ""})
+//
+//        let finalArray: [HaveTime] = arrayWithTime.sorted { (time1, time2) -> Bool in
+//            let time1Int = time1.timeEvent?.replacingOccurrences(of: "'", with: "")
+//            let time2Int = time2.timeEvent?.replacingOccurrences(of: "'", with: "")
+//            if let t1 = time1Int, let t2 = time2Int {
+//                if let tInt1 = Int(t1), let tInt2 = Int(t2) {
+//                    return tInt1 < tInt2
+//                }
+//            }
+//            return true
+//        }
+//        return finalArray
+//    }
+    
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {

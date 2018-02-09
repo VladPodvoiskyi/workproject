@@ -9,34 +9,18 @@
 import Foundation
 
 protocol HaveTime {
-    var time: String? {get set}
+    var timeEvent: String? {get set}
 }
 
 class GoalScorer: HaveTime {
-    var time: String? {
-        get {
-            return self.time
-        }
-        
-        set {
-        
-        }
-    }
+    var timeEvent: String?
     var homeScorer: String?
     var score: String?
     var awayScorer:String?
 }
 
 class Card: HaveTime {
-    var time: String? {
-        get {
-            return self.time
-        }
-        
-        set {
-            
-        }
-    }
+    var timeEvent: String?
     var homeFault: String?
     var card: String?
     var awayFault: String?

@@ -11,7 +11,15 @@ import Foundation
 import Alamofire
 
 class CustomHeaderMatchDetailsCell: UITableViewCell {
-
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        makeView()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     var headerLabel: UILabel = {
         let label = UILabel()
@@ -26,7 +34,7 @@ class CustomHeaderMatchDetailsCell: UITableViewCell {
     var baseView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor.gray
+        view.backgroundColor = UIColor.cyan
         
         return view
     }()
@@ -34,7 +42,6 @@ class CustomHeaderMatchDetailsCell: UITableViewCell {
     private func makeView() {
         createConstraints()
     }
-
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -62,7 +69,13 @@ class CustomHeaderMatchDetailsCell: UITableViewCell {
         self.headerLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
         
-        
+//        headerLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+//        headerLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+//        headerLabel.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.5).isActive = true
+//        headerLabel.widthAnchor.constraint(equalToConstant: 70).isActive = true
+       // headerLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 150).isActive = true
     }
 
 }
+
+

@@ -24,7 +24,7 @@ class MatchDetailsCell: UITableViewCell {
         let time = UILabel()
         time.text = "16"
         time.translatesAutoresizingMaskIntoConstraints = false
-        time.font = UIFont.systemFont(ofSize: 14)
+        time.font = UIFont.systemFont(ofSize: 13)
         
         return time
     }()
@@ -32,7 +32,7 @@ class MatchDetailsCell: UITableViewCell {
     var playerHome: UILabel = {
         let pH = UILabel()
         pH.text = ""
-        pH.font = UIFont.systemFont(ofSize: 14)
+        pH.font = UIFont.systemFont(ofSize: 13)
         pH.translatesAutoresizingMaskIntoConstraints = false
         pH.textAlignment = .right
         
@@ -69,11 +69,12 @@ class MatchDetailsCell: UITableViewCell {
     var playerAway: UILabel = {
        let pA = UILabel()
         pA.text = ""
-        pA.font = UIFont.systemFont(ofSize: 14)
+        pA.font = UIFont.systemFont(ofSize: 13)
         pA.translatesAutoresizingMaskIntoConstraints = false
         
         return pA
     }()
+    
     
     private func makeView() {
         createConstraints()
@@ -133,9 +134,8 @@ class MatchDetailsCell: UITableViewCell {
         self.addSubview(playerAway)
         playerAway.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         playerAway.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.5).isActive = true
-        playerAway.widthAnchor.constraint(equalToConstant: 140).isActive = true
+        playerAway.widthAnchor.constraint(equalToConstant: 150).isActive = true
         playerAway.leadingAnchor.constraint(equalTo: minuteOfEvents.leadingAnchor, constant: 230).isActive = true
-      
-    }
 
+    }
 }

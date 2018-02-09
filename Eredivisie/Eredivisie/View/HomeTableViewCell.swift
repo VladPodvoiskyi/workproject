@@ -94,8 +94,6 @@ class HomeTableViewCell: UITableViewCell {
 
         self.addSubview(homeTeam)
         self.addSubview(awayTeam)
-//        self.addSubview(homeTeamGoals)
-//        self.addSubview(awayTeamGoals)
         self.addSubview(teamSeparator)
     }
     //create constraints for labels

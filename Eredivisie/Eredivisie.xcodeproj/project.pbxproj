@@ -12,11 +12,12 @@
 		CE1695652005091300E3BAE8 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1695642005091300E3BAE8 /* Team.swift */; };
 		CE27EBA62006352C0045F9A6 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27EBA52006352C0045F9A6 /* TableCell.swift */; };
 		CE2DBAFB2019F66D00BE0C10 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2DBAFA2019F66D00BE0C10 /* Statistics.swift */; };
+		CE2F1572202DD66100467C3D /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F1571202DD66100467C3D /* EventsViewController.swift */; };
+		CE2F1574202DDC1500467C3D /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F1573202DDC1500467C3D /* EventsView.swift */; };
 		CE3418C520206A04008BA918 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3418C420206A04008BA918 /* RequestManager.swift */; };
 		CE3418C720206B07008BA918 /* RequestNetworkManager+Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3418C620206B07008BA918 /* RequestNetworkManager+Table.swift */; };
 		CE3418C92020702A008BA918 /* RequestNetworkManager+HomeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3418C82020702A008BA918 /* RequestNetworkManager+HomeTable.swift */; };
 		CE3A2589202AE08600900901 /* MatchDetailsModel + Statictics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A2588202AE08600900901 /* MatchDetailsModel + Statictics.swift */; };
-		CE3A258B202AEEAF00900901 /* RequestNetworkManager + Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A258A202AEEAF00900901 /* RequestNetworkManager + Statistics.swift */; };
 		CE3A68B2201897A6000CB942 /* CustomHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A68B1201897A6000CB942 /* CustomHeaderCell.swift */; };
 		CE3FF828202309EB00C35B37 /* MatchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3FF827202309EB00C35B37 /* MatchDetailsViewController.swift */; };
 		CE3FFFD720247D3C0005FE4C /* MatchDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3FFFD620247D3C0005FE4C /* MatchDetailsModel.swift */; };
@@ -49,11 +50,12 @@
 		CE1695642005091300E3BAE8 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		CE27EBA52006352C0045F9A6 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		CE2DBAFA2019F66D00BE0C10 /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
+		CE2F1571202DD66100467C3D /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		CE2F1573202DDC1500467C3D /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		CE3418C420206A04008BA918 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		CE3418C620206B07008BA918 /* RequestNetworkManager+Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestNetworkManager+Table.swift"; sourceTree = "<group>"; };
 		CE3418C82020702A008BA918 /* RequestNetworkManager+HomeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestNetworkManager+HomeTable.swift"; sourceTree = "<group>"; };
 		CE3A2588202AE08600900901 /* MatchDetailsModel + Statictics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchDetailsModel + Statictics.swift"; sourceTree = "<group>"; };
-		CE3A258A202AEEAF00900901 /* RequestNetworkManager + Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestNetworkManager + Statistics.swift"; sourceTree = "<group>"; };
 		CE3A68B1201897A6000CB942 /* CustomHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderCell.swift; sourceTree = "<group>"; };
 		CE3FF827202309EB00C35B37 /* MatchDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewController.swift; sourceTree = "<group>"; };
 		CE3FFFD620247D3C0005FE4C /* MatchDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsModel.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				CE3FFFDB202494270005FE4C /* MatchDetailsCell.swift */,
 				CE82A9502028BE8400014F25 /* MatchDetailsView.swift */,
 				CE411DD12029CCB1005441DB /* CustomHeaderMatchDetailsCell.swift */,
+				CE2F1573202DDC1500467C3D /* EventsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				CEDF5C982011E31800D2123F /* MainViewController.swift */,
 				CEDF5C9D20121C7D00D2123F /* HomeViewController.swift */,
 				CE3FF827202309EB00C35B37 /* MatchDetailsViewController.swift */,
+				CE2F1571202DD66100467C3D /* EventsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -210,7 +214,6 @@
 				CEDF5C9B2012173800D2123F /* Alamofire+Custom.swift */,
 				CE3418C620206B07008BA918 /* RequestNetworkManager+Table.swift */,
 				CE3418C82020702A008BA918 /* RequestNetworkManager+HomeTable.swift */,
-				CE3A258A202AEEAF00900901 /* RequestNetworkManager + Statistics.swift */,
 				CE4140EB2021EAB0006B3EA1 /* ViewsExtension.swift */,
 			);
 			path = Extensions;
@@ -364,7 +367,7 @@
 				CEDF5C9C2012173800D2123F /* Alamofire+Custom.swift in Sources */,
 				CE4232FC20060AAE00E01DDA /* TableViewController.swift in Sources */,
 				CE82A9512028BE8400014F25 /* MatchDetailsView.swift in Sources */,
-				CE3A258B202AEEAF00900901 /* RequestNetworkManager + Statistics.swift in Sources */,
+				CE2F1572202DD66100467C3D /* EventsViewController.swift in Sources */,
 				CE69BB822004E1BE00844D53 /* Eredivisie.xcdatamodeld in Sources */,
 				CE2DBAFB2019F66D00BE0C10 /* Statistics.swift in Sources */,
 				CE3FFFDC202494270005FE4C /* MatchDetailsCell.swift in Sources */,
@@ -383,6 +386,7 @@
 				CEDF5C992011E31800D2123F /* MainViewController.swift in Sources */,
 				CE4140EA2021BBB4006B3EA1 /* TeamViewModel.swift in Sources */,
 				CE3FFFD720247D3C0005FE4C /* MatchDetailsModel.swift in Sources */,
+				CE2F1574202DDC1500467C3D /* EventsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
