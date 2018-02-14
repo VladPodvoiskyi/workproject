@@ -1,17 +1,15 @@
 //
-//  HomeTableViewCell.swift
+//  EventsTableViewCell.swift
 //  Eredivisie
 //
-//  Created by user on 1/22/18.
+//  Created by user on 2/13/18.
 //  Copyright © 2018 vlad. All rights reserved.
 //
 
 import UIKit
-import Foundation
 
-class HomeTableViewCell: UITableViewCell {
-    
-    
+class EventsTableViewCell: UITableViewCell {
+
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         makeView()
@@ -28,13 +26,12 @@ class HomeTableViewCell: UITableViewCell {
         
         // Initialization code
     }
-// create labels for cell
+    // create labels for cell
     var homeTeam: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.font = UIFont.preferredFont(forTextStyle: .footnote)
-//        label.text = "Sparta Rotterdam"
         
         return label
     }()
@@ -44,11 +41,10 @@ class HomeTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.font = UIFont.preferredFont(forTextStyle: .footnote)
-//        label.text = "Ajax"
         
         return label
     }()
-
+    
     
     var teamSeparator: UILabel = {
         let label = UILabel()
@@ -64,7 +60,7 @@ class HomeTableViewCell: UITableViewCell {
     }
     
     private func addMySubView() {
-
+        
         self.addSubview(homeTeam)
         self.addSubview(awayTeam)
         self.addSubview(teamSeparator)
@@ -88,17 +84,16 @@ class HomeTableViewCell: UITableViewCell {
     }
     
     private func setup(with statistics: Statistics) {
-
+        
         homeTeam.text = "\(statistics.homeTeamName)"
         awayTeam.text = "\(statistics.awayTeamName)"
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
     
-
 }

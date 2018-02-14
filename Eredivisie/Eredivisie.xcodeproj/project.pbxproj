@@ -11,9 +11,9 @@
 		CE1695632005053F00E3BAE8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1695622005053F00E3BAE8 /* Constants.swift */; };
 		CE1695652005091300E3BAE8 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1695642005091300E3BAE8 /* Team.swift */; };
 		CE27EBA62006352C0045F9A6 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27EBA52006352C0045F9A6 /* TableCell.swift */; };
+		CE2D7E712032ED8000A5FC45 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D7E702032ED8000A5FC45 /* EventsTableViewCell.swift */; };
 		CE2DBAFB2019F66D00BE0C10 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2DBAFA2019F66D00BE0C10 /* Statistics.swift */; };
 		CE2F1572202DD66100467C3D /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F1571202DD66100467C3D /* EventsViewController.swift */; };
-		CE2F1574202DDC1500467C3D /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F1573202DDC1500467C3D /* EventsView.swift */; };
 		CE3418C520206A04008BA918 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3418C420206A04008BA918 /* RequestManager.swift */; };
 		CE3418C720206B07008BA918 /* RequestNetworkManager+Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3418C620206B07008BA918 /* RequestNetworkManager+Table.swift */; };
 		CE3418C92020702A008BA918 /* RequestNetworkManager+HomeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3418C82020702A008BA918 /* RequestNetworkManager+HomeTable.swift */; };
@@ -30,6 +30,9 @@
 		CE4232F92006081C00E01DDA /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4232F82006081C00E01DDA /* Events.storyboard */; };
 		CE4232FC20060AAE00E01DDA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4232FB20060AAE00E01DDA /* TableViewController.swift */; };
 		CE460094201F42C5004D5B0D /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE460093201F42C5004D5B0D /* CoreDataStack.swift */; };
+		CE4AB5F120320E7A0044BAA9 /* EventsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AB5F020320E7A0044BAA9 /* EventsHeaderTableViewCell.swift */; };
+		CE4AB5F320320F9B0044BAA9 /* EventsStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AB5F220320F9B0044BAA9 /* EventsStatistics.swift */; };
+		CE4AB5F5203210C90044BAA9 /* RequestNetworkManager+EventsStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AB5F4203210C90044BAA9 /* RequestNetworkManager+EventsStatistics.swift */; };
 		CE69BB7A2004E1BD00844D53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69BB792004E1BD00844D53 /* AppDelegate.swift */; };
 		CE69BB7C2004E1BE00844D53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69BB7B2004E1BE00844D53 /* ViewController.swift */; };
 		CE69BB7F2004E1BE00844D53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE69BB7D2004E1BE00844D53 /* Main.storyboard */; };
@@ -49,9 +52,9 @@
 		CE1695622005053F00E3BAE8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE1695642005091300E3BAE8 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		CE27EBA52006352C0045F9A6 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		CE2D7E702032ED8000A5FC45 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
 		CE2DBAFA2019F66D00BE0C10 /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		CE2F1571202DD66100467C3D /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
-		CE2F1573202DDC1500467C3D /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		CE3418C420206A04008BA918 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		CE3418C620206B07008BA918 /* RequestNetworkManager+Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestNetworkManager+Table.swift"; sourceTree = "<group>"; };
 		CE3418C82020702A008BA918 /* RequestNetworkManager+HomeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestNetworkManager+HomeTable.swift"; sourceTree = "<group>"; };
@@ -68,6 +71,9 @@
 		CE4232F82006081C00E01DDA /* Events.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		CE4232FB20060AAE00E01DDA /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		CE460093201F42C5004D5B0D /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		CE4AB5F020320E7A0044BAA9 /* EventsHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		CE4AB5F220320F9B0044BAA9 /* EventsStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsStatistics.swift; sourceTree = "<group>"; };
+		CE4AB5F4203210C90044BAA9 /* RequestNetworkManager+EventsStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestNetworkManager+EventsStatistics.swift"; sourceTree = "<group>"; };
 		CE69BB762004E1BD00844D53 /* Eredivisie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eredivisie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE69BB792004E1BD00844D53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE69BB7B2004E1BE00844D53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -160,7 +166,8 @@
 				CE3FFFDB202494270005FE4C /* MatchDetailsCell.swift */,
 				CE82A9502028BE8400014F25 /* MatchDetailsView.swift */,
 				CE411DD12029CCB1005441DB /* CustomHeaderMatchDetailsCell.swift */,
-				CE2F1573202DDC1500467C3D /* EventsView.swift */,
+				CE4AB5F020320E7A0044BAA9 /* EventsHeaderTableViewCell.swift */,
+				CE2D7E702032ED8000A5FC45 /* EventsTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,6 +180,7 @@
 				CE4140E92021BBB4006B3EA1 /* TeamViewModel.swift */,
 				CE3FFFD620247D3C0005FE4C /* MatchDetailsModel.swift */,
 				CE3A2588202AE08600900901 /* MatchDetailsModel + Statictics.swift */,
+				CE4AB5F220320F9B0044BAA9 /* EventsStatistics.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -215,6 +223,7 @@
 				CE3418C620206B07008BA918 /* RequestNetworkManager+Table.swift */,
 				CE3418C82020702A008BA918 /* RequestNetworkManager+HomeTable.swift */,
 				CE4140EB2021EAB0006B3EA1 /* ViewsExtension.swift */,
+				CE4AB5F4203210C90044BAA9 /* RequestNetworkManager+EventsStatistics.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -362,11 +371,13 @@
 			files = (
 				CE3418C520206A04008BA918 /* RequestManager.swift in Sources */,
 				CE3418C92020702A008BA918 /* RequestNetworkManager+HomeTable.swift in Sources */,
+				CE2D7E712032ED8000A5FC45 /* EventsTableViewCell.swift in Sources */,
 				CE69BB7C2004E1BE00844D53 /* ViewController.swift in Sources */,
 				CE3A68B2201897A6000CB942 /* CustomHeaderCell.swift in Sources */,
 				CEDF5C9C2012173800D2123F /* Alamofire+Custom.swift in Sources */,
 				CE4232FC20060AAE00E01DDA /* TableViewController.swift in Sources */,
 				CE82A9512028BE8400014F25 /* MatchDetailsView.swift in Sources */,
+				CE4AB5F320320F9B0044BAA9 /* EventsStatistics.swift in Sources */,
 				CE2F1572202DD66100467C3D /* EventsViewController.swift in Sources */,
 				CE69BB822004E1BE00844D53 /* Eredivisie.xcdatamodeld in Sources */,
 				CE2DBAFB2019F66D00BE0C10 /* Statistics.swift in Sources */,
@@ -375,9 +386,11 @@
 				CE27EBA62006352C0045F9A6 /* TableCell.swift in Sources */,
 				CE411DD22029CCB1005441DB /* CustomHeaderMatchDetailsCell.swift in Sources */,
 				CE460094201F42C5004D5B0D /* CoreDataStack.swift in Sources */,
+				CE4AB5F120320E7A0044BAA9 /* EventsHeaderTableViewCell.swift in Sources */,
 				CE816FCF2015E35400B9D65C /* HomeTableViewCell.swift in Sources */,
 				CEDF5C9E20121C7D00D2123F /* HomeViewController.swift in Sources */,
 				CE69BB7A2004E1BD00844D53 /* AppDelegate.swift in Sources */,
+				CE4AB5F5203210C90044BAA9 /* RequestNetworkManager+EventsStatistics.swift in Sources */,
 				CE3FF828202309EB00C35B37 /* MatchDetailsViewController.swift in Sources */,
 				CE1695652005091300E3BAE8 /* Team.swift in Sources */,
 				CE1695632005053F00E3BAE8 /* Constants.swift in Sources */,
@@ -386,7 +399,6 @@
 				CEDF5C992011E31800D2123F /* MainViewController.swift in Sources */,
 				CE4140EA2021BBB4006B3EA1 /* TeamViewModel.swift in Sources */,
 				CE3FFFD720247D3C0005FE4C /* MatchDetailsModel.swift in Sources */,
-				CE2F1574202DDC1500467C3D /* EventsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

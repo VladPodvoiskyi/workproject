@@ -17,9 +17,41 @@
                     <view key="view" contentMode="scaleToFill" id="cyu-3a-669">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4xz-gB-ZNo">
+                                <rect key="frame" x="15" y="40" width="135" height="135"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fk9-I3-hsE">
+                                        <rect key="frame" x="0.0" y="0.0" width="135" height="135"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="135" id="0we-qa-SvE"/>
+                                    <constraint firstAttribute="width" constant="135" id="2ze-1d-gFV"/>
+                                </constraints>
+                            </stackView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehq-ZF-LiJ">
+                                <rect key="frame" x="135" y="35" width="220" height="135"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="135" id="DYk-Fl-Xhu"/>
+                                    <constraint firstAttribute="width" constant="220" id="dRt-rR-MLW"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ehq-ZF-LiJ" firstAttribute="top" secondItem="nxB-D3-59s" secondAttribute="top" constant="15" id="UMG-JW-eFw"/>
+                            <constraint firstItem="4xz-gB-ZNo" firstAttribute="leading" secondItem="nxB-D3-59s" secondAttribute="leading" constant="15" id="WoC-a1-L2o"/>
+                            <constraint firstItem="nxB-D3-59s" firstAttribute="trailing" secondItem="ehq-ZF-LiJ" secondAttribute="trailing" constant="20" id="q0G-ny-7qX"/>
+                            <constraint firstItem="4xz-gB-ZNo" firstAttribute="top" secondItem="nxB-D3-59s" secondAttribute="top" constant="20" id="vbo-s6-vE9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nxB-D3-59s"/>
                     </view>
+                    <connections>
+                        <outlet property="eventImageView" destination="fk9-I3-hsE" id="hCi-rp-KmO"/>
+                        <outlet property="eventPickerView" destination="ehq-ZF-LiJ" id="J66-Qm-JFM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nH5-eU-C4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -117,10 +117,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
-    //    func loadPage() {
-    //        let myPage = "https://eredivisie.nl"
-    //    }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.events[section].1.count
