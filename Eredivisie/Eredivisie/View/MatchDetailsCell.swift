@@ -79,6 +79,15 @@ class MatchDetailsCell: UITableViewCell {
     private func makeView() {
         createConstraints()
     }
+    
+    override func prepareForReuse() {
+        minuteOfEvents.text = ""
+        playerHome.text = ""
+        playerAway.text = ""
+        imageEventHome.image = UIImage()
+        imageEventAway.image = UIImage()
+        currentResult.text = ""
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

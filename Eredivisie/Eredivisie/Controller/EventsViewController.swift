@@ -111,21 +111,29 @@ extension EventsViewController: UIPickerViewDelegate {
         eventImageView.image = UIImage(named: teams[row])
         
         newNewEvents.removeAll()
-        
+
         for item in newEvents {
             for newItem in item.1 {
                 if newItem.homeTeamName == teams[row] || newItem.awayTeamName == teams[row] {
-                    newNewEvents.append(item)
+                    if !newNewEvents.contains(where: {$0.0.date == item.0.date && $0.0.time == item.0.time}) {
+                        newNewEvents.append((item.0,[newItem]))
+                    } else {
+//                        newNewEvents.forEach({ (newItem1) in
+//                            if newItem1.0.date == item.0.date && newItem1.0.time == item.0.time {
+//                                
+//                            }
+//                        })
+                    }
                 }
             }
         }
-        
+
         self.eventsTableView.reloadData()
-        
+
 //        arrayOfData = arrayOfData.filter({ (eventsStat) -> Bool in
 //            eventsStat.homeTeamName == teams[row]
 //        })
-//        self.eventsTableView.reloadData()
+       self.eventsTableView.reloadData()
     }
 }
 
@@ -188,8 +196,8 @@ extension EventsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "EventsHeaderTableViewCell") as! EventsHeaderTableViewCell
-        view.dateLabel.text = self.newEvents[section].0.date
-        view.timeLabel.text = self.newEvents[section].0.time
+        view.dateLabel.text = self.newNewEvents[section].0.date
+        view.timeLabel.text = self.newNewEvents[section].0.time
         
         return view
     }
