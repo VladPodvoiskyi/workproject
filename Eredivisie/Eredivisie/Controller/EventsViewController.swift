@@ -32,6 +32,14 @@ class EventsViewController: UIViewController {
 
     var teams = ["ADO Den Haag", "Ajax", "AZ Alkmaar", "Excelsior", "FC Groningen", "FC Twente", "FC Utrecht", "Feyenoord", "Heracles", "NAC Breda", "PEC Zwolle", "PSV Eindhoven", "Roda JC Kerkrade", "SC Heerenveen", "Sparta Rotterdam", "Vitesse", "VVV-Venlo", "Willem II"]
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+//        self.eventPickerView.selectedRow(inComponent: 0)
+        self.eventPickerView.selectRow(0, inComponent: 0, animated: false)
+        self.pickerView(self.eventPickerView, didSelectRow: 0, inComponent: 0)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         eventsHeadertableViewCell.addConstraintsForHeaderSell()
@@ -71,7 +79,9 @@ class EventsViewController: UIViewController {
                     self.newEvents.append((date, [item]))
                 }
             })
-            self.eventsTableView.reloadData()
+//            self.eventsTableView.reloadData()
+            self.pickerView(self.eventPickerView, didSelectRow: 0, inComponent: 0)
+
         })
     }
     
@@ -111,29 +121,27 @@ extension EventsViewController: UIPickerViewDelegate {
         eventImageView.image = UIImage(named: teams[row])
         
         newNewEvents.removeAll()
-
+        
         for item in newEvents {
             for newItem in item.1 {
                 if newItem.homeTeamName == teams[row] || newItem.awayTeamName == teams[row] {
                     if !newNewEvents.contains(where: {$0.0.date == item.0.date && $0.0.time == item.0.time}) {
                         newNewEvents.append((item.0,[newItem]))
                     } else {
-//                        newNewEvents.forEach({ (newItem1) in
-//                            if newItem1.0.date == item.0.date && newItem1.0.time == item.0.time {
-//                                
-//                            }
-//                        })
+                        //                        newNewEvents.forEach({ (newItem1) in
+                        //                            if newItem1.0.date == item.0.date && newItem1.0.time == item.0.time {
+                        //
+                        //                            }
+                        //                        })
                     }
                 }
             }
         }
-
+        
         self.eventsTableView.reloadData()
-
 //        arrayOfData = arrayOfData.filter({ (eventsStat) -> Bool in
 //            eventsStat.homeTeamName == teams[row]
 //        })
-       self.eventsTableView.reloadData()
     }
 }
 

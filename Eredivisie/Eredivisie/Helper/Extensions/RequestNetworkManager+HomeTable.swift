@@ -61,7 +61,7 @@ extension RequestNetworkManager {
                 
                 // fill array of score
                 for goalScorer in goalscorerInNet {
-                    let goalscorer = GoalScorer()
+                    let goalscorer = GoalScorers()
                     if let time = goalScorer["time"] as? String {
                         goalscorer.timeEvent = time
                     }

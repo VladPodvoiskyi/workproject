@@ -12,7 +12,7 @@ protocol HaveTime {
     var timeEvent: String? {get set}
 }
 
-class GoalScorer: HaveTime {
+class GoalScorers: HaveTime {
     var timeEvent: String?
     var homeScorer: String?
     var score: String?

@@ -14,6 +14,17 @@
 		CE2D7E712032ED8000A5FC45 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D7E702032ED8000A5FC45 /* EventsTableViewCell.swift */; };
 		CE2DBAFB2019F66D00BE0C10 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2DBAFA2019F66D00BE0C10 /* Statistics.swift */; };
 		CE2F1572202DD66100467C3D /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F1571202DD66100467C3D /* EventsViewController.swift */; };
+		CE31F88D203C1D0C002553C3 /* GoalScorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F883203C1D0C002553C3 /* GoalScorer.swift */; };
+		CE31F88E203C1D0C002553C3 /* GoalScorer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F884203C1D0C002553C3 /* GoalScorer+CoreDataProperties.swift */; };
+		CE31F88F203C1D0C002553C3 /* DataTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F885203C1D0C002553C3 /* DataTable.swift */; };
+		CE31F890203C1D0C002553C3 /* DataTable+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F886203C1D0C002553C3 /* DataTable+CoreDataProperties.swift */; };
+		CE31F891203C1D0C002553C3 /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F887203C1D0C002553C3 /* Games.swift */; };
+		CE31F892203C1D0C002553C3 /* Games+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F888203C1D0C002553C3 /* Games+CoreDataProperties.swift */; };
+		CE31F893203C1D0C002553C3 /* TeamSeason.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F889203C1D0C002553C3 /* TeamSeason.swift */; };
+		CE31F894203C1D0C002553C3 /* TeamSeason+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F88A203C1D0C002553C3 /* TeamSeason+CoreDataProperties.swift */; };
+		CE31F895203C1D0C002553C3 /* GotCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F88B203C1D0C002553C3 /* GotCards.swift */; };
+		CE31F896203C1D0C002553C3 /* GotCards+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F88C203C1D0C002553C3 /* GotCards+CoreDataProperties.swift */; };
+		CE31F898203C2A44002553C3 /* NSManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F897203C2A44002553C3 /* NSManagedObjectContext.swift */; };
 		CE3418C520206A04008BA918 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3418C420206A04008BA918 /* RequestManager.swift */; };
 		CE3418C720206B07008BA918 /* RequestNetworkManager+Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3418C620206B07008BA918 /* RequestNetworkManager+Table.swift */; };
 		CE3418C92020702A008BA918 /* RequestNetworkManager+HomeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3418C82020702A008BA918 /* RequestNetworkManager+HomeTable.swift */; };
@@ -55,6 +66,17 @@
 		CE2D7E702032ED8000A5FC45 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
 		CE2DBAFA2019F66D00BE0C10 /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		CE2F1571202DD66100467C3D /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		CE31F883203C1D0C002553C3 /* GoalScorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalScorer.swift; sourceTree = "<group>"; };
+		CE31F884203C1D0C002553C3 /* GoalScorer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoalScorer+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE31F885203C1D0C002553C3 /* DataTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTable.swift; sourceTree = "<group>"; };
+		CE31F886203C1D0C002553C3 /* DataTable+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataTable+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE31F887203C1D0C002553C3 /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
+		CE31F888203C1D0C002553C3 /* Games+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Games+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE31F889203C1D0C002553C3 /* TeamSeason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSeason.swift; sourceTree = "<group>"; };
+		CE31F88A203C1D0C002553C3 /* TeamSeason+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TeamSeason+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE31F88B203C1D0C002553C3 /* GotCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotCards.swift; sourceTree = "<group>"; };
+		CE31F88C203C1D0C002553C3 /* GotCards+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GotCards+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE31F897203C2A44002553C3 /* NSManagedObjectContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectContext.swift; sourceTree = "<group>"; };
 		CE3418C420206A04008BA918 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		CE3418C620206B07008BA918 /* RequestNetworkManager+Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestNetworkManager+Table.swift"; sourceTree = "<group>"; };
 		CE3418C82020702A008BA918 /* RequestNetworkManager+HomeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestNetworkManager+HomeTable.swift"; sourceTree = "<group>"; };
@@ -110,6 +132,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE31F85A203C19C7002553C3 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				CE31F883203C1D0C002553C3 /* GoalScorer.swift */,
+				CE31F884203C1D0C002553C3 /* GoalScorer+CoreDataProperties.swift */,
+				CE31F885203C1D0C002553C3 /* DataTable.swift */,
+				CE31F886203C1D0C002553C3 /* DataTable+CoreDataProperties.swift */,
+				CE31F887203C1D0C002553C3 /* Games.swift */,
+				CE31F888203C1D0C002553C3 /* Games+CoreDataProperties.swift */,
+				CE31F889203C1D0C002553C3 /* TeamSeason.swift */,
+				CE31F88A203C1D0C002553C3 /* TeamSeason+CoreDataProperties.swift */,
+				CE31F88B203C1D0C002553C3 /* GotCards.swift */,
+				CE31F88C203C1D0C002553C3 /* GotCards+CoreDataProperties.swift */,
+				CE31F897203C2A44002553C3 /* NSManagedObjectContext.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
 		CE4232FA20060A7300E01DDA /* Table */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +179,7 @@
 		CE69BB782004E1BD00844D53 /* Eredivisie */ = {
 			isa = PBXGroup;
 			children = (
+				CE31F85A203C19C7002553C3 /* Core Data */,
 				CE69BB922004E24400844D53 /* Source */,
 				CE69BB912004E23C00844D53 /* Helper */,
 				CE69BB902004E23100844D53 /* Controller */,
@@ -369,16 +410,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE31F893203C1D0C002553C3 /* TeamSeason.swift in Sources */,
 				CE3418C520206A04008BA918 /* RequestManager.swift in Sources */,
 				CE3418C92020702A008BA918 /* RequestNetworkManager+HomeTable.swift in Sources */,
 				CE2D7E712032ED8000A5FC45 /* EventsTableViewCell.swift in Sources */,
 				CE69BB7C2004E1BE00844D53 /* ViewController.swift in Sources */,
+				CE31F894203C1D0C002553C3 /* TeamSeason+CoreDataProperties.swift in Sources */,
 				CE3A68B2201897A6000CB942 /* CustomHeaderCell.swift in Sources */,
+				CE31F892203C1D0C002553C3 /* Games+CoreDataProperties.swift in Sources */,
 				CEDF5C9C2012173800D2123F /* Alamofire+Custom.swift in Sources */,
 				CE4232FC20060AAE00E01DDA /* TableViewController.swift in Sources */,
 				CE82A9512028BE8400014F25 /* MatchDetailsView.swift in Sources */,
+				CE31F88F203C1D0C002553C3 /* DataTable.swift in Sources */,
 				CE4AB5F320320F9B0044BAA9 /* EventsStatistics.swift in Sources */,
 				CE2F1572202DD66100467C3D /* EventsViewController.swift in Sources */,
+				CE31F88D203C1D0C002553C3 /* GoalScorer.swift in Sources */,
 				CE69BB822004E1BE00844D53 /* Eredivisie.xcdatamodeld in Sources */,
 				CE2DBAFB2019F66D00BE0C10 /* Statistics.swift in Sources */,
 				CE3FFFDC202494270005FE4C /* MatchDetailsCell.swift in Sources */,
@@ -392,11 +438,17 @@
 				CE69BB7A2004E1BD00844D53 /* AppDelegate.swift in Sources */,
 				CE4AB5F5203210C90044BAA9 /* RequestNetworkManager+EventsStatistics.swift in Sources */,
 				CE3FF828202309EB00C35B37 /* MatchDetailsViewController.swift in Sources */,
+				CE31F891203C1D0C002553C3 /* Games.swift in Sources */,
 				CE1695652005091300E3BAE8 /* Team.swift in Sources */,
+				CE31F890203C1D0C002553C3 /* DataTable+CoreDataProperties.swift in Sources */,
 				CE1695632005053F00E3BAE8 /* Constants.swift in Sources */,
+				CE31F88E203C1D0C002553C3 /* GoalScorer+CoreDataProperties.swift in Sources */,
 				CE4140EC2021EAB0006B3EA1 /* ViewsExtension.swift in Sources */,
+				CE31F896203C1D0C002553C3 /* GotCards+CoreDataProperties.swift in Sources */,
 				CE3A2589202AE08600900901 /* MatchDetailsModel + Statictics.swift in Sources */,
+				CE31F898203C2A44002553C3 /* NSManagedObjectContext.swift in Sources */,
 				CEDF5C992011E31800D2123F /* MainViewController.swift in Sources */,
+				CE31F895203C1D0C002553C3 /* GotCards.swift in Sources */,
 				CE4140EA2021BBB4006B3EA1 /* TeamViewModel.swift in Sources */,
 				CE3FFFD720247D3C0005FE4C /* MatchDetailsModel.swift in Sources */,
 			);
