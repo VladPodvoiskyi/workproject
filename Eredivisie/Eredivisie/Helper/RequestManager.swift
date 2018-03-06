@@ -15,7 +15,9 @@ class RequestNetworkManager {
     static let LEAGUE_ID = "league_id="
     static let DATE_FROM = "from="
     static let DATE_TO = "to="
-    static let API_KEY = "&APIkey=9f4888d8b7f21dac93a851d0c291266fe884da492fba995dbdf59789347e913d"
+    static let API_KEY = "&APIkey=78931cad5686a3f995869af181577b7dc94f41fd897963c93729e41e7353d0f5"
+    
+
     
     static func createURL(withParameters parametrs: String) -> String {
         return baseURL + parametrs + API_KEY

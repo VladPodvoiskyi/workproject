@@ -10,6 +10,14 @@ import Foundation
 import CoreData
 
 class CoreDataStack {
+    static let stack = CoreDataStack()
+    
+    var context: NSManagedObjectContext {
+        return self.persistentContainer.viewContext
+    }
+    
+    private init() {
+    }
     
     // MARK: - Core Data stack
     

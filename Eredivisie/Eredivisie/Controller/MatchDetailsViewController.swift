@@ -85,8 +85,7 @@ extension MatchDetailsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = customView.matchDetailsTableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath) as! MatchDetailsCell
 
-//        if let goal = statistics.events[indexPath.row] as? GoalScorer {
-                if let goal = finalEventsArray[indexPath.row] as? GoalScorer {
+                if let goal = finalEventsArray[indexPath.row] as? GoalScorers {
             if let home = goal.homeScorer {
                 if (!home.isEmpty) {
                     cell.playerHome.text = home
@@ -104,7 +103,6 @@ extension MatchDetailsViewController: UITableViewDataSource {
             if let score = goal.score {
                 cell.currentResult.text = score
             }
-            
 //            if let time = goal.time {
 //               cell.minuteOfEvents.text = time
 //            }
@@ -150,7 +148,6 @@ extension MatchDetailsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return statistics.events.count
         return finalEventsArray.count
     }
     

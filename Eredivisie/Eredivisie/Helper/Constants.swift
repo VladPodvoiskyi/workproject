@@ -26,7 +26,6 @@ typealias DownloadComplete = () -> Void
 
 //https://apifootball.com/api/?action=get_standings&league_id=137&APIkey=9f4888d8b7f21dac93a851d0c291266fe884da492fba995dbdf59789347e913d
 
-//https://apifootball.com/api/?action=get_events&from=2017-08-01&to=2018-06-01&league_id=137&APIkey=9f4888d8b7f21dac93a851d0c291266fe884da492fba995dbdf59789347e913d
+//https://apifootball.com/api/?action=get_events&from=2017-08-01&to=2018-06-01&league_id=137&APIkey=78931cad5686a3f995869af181577b7dc94f41fd897963c93729e41e7353d0f5
 
-//let url = URL(string: RequestNetworkManager.createURL(withParameters: ACTION + "get_events" + "&" + DATE_FROM + dateFrom + "&" + DATE_TO + dateTo + "&" + LEAGUE_ID + leagueID))
 

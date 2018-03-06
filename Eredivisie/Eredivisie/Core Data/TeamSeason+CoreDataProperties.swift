@@ -17,29 +17,11 @@ extension TeamSeason {
         return NSFetchRequest<TeamSeason>(entityName: "TeamSeason")
     }
 
-    @NSManaged public var away: Int32
-    @NSManaged public var home: Int32
-    @NSManaged public var overall: Int32
     @NSManaged public var teamName: String?
-    @NSManaged public var dataTable: Set<DataTable>
-    @NSManaged public var games: Set<Games>
-
-}
-
-// MARK: Generated accessors for dataTable
-extension TeamSeason {
-
-    @objc(addDataTableObject:)
-    @NSManaged public func addToDataTable(_ value: DataTable)
-
-    @objc(removeDataTableObject:)
-    @NSManaged public func removeFromDataTable(_ value: DataTable)
-
-    @objc(addDataTable:)
-    @NSManaged public func addToDataTable(_ values: NSSet)
-
-    @objc(removeDataTable:)
-    @NSManaged public func removeFromDataTable(_ values: NSSet)
+    @NSManaged public var games: NSSet?
+    @NSManaged public var away: DataTable?
+    @NSManaged public var home: DataTable?
+    @NSManaged public var overall: DataTable?
 
 }
 

@@ -46,11 +46,35 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.mainImageViewConstrains()
+        
+        DispatchQueue.global(qos: .userInitiated).async{
+            //TODO it will be imolemented
+            RequestNetworkManager.fetchEvents(dateFrom: dateFromURL, dateTo: dateToURL, leagueID: HollandLeagueID, handler: {
+                self.arrayOfData = Statistics.allStatistics
+                
+                self.arrayOfData.forEach({ (item) in
+                    let date = MyDate(time: item.matchTime, date: item.date)
+                    
+                    var isAddedToEvents = false
+                    
+                    for (index, itemEvent) in self.events.enumerated() {
+                        if itemEvent.0.time == date.time && itemEvent.0.date == date.date {
+                            self.events[index].1.append(item)
+                            isAddedToEvents = true
+                            break
+                        }
+                    }
+                    
+                    if !isAddedToEvents {
+                        self.events.append((date, [item]))
+                    }
+                })
+                self.homeTableView.reloadData()
+            })
+        }
+        self.homeTableView.backgroundColor = UIColor.lightGray
 
         self.mainImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onEredivisieImageView)))
-        
-        homeTableView.backgroundColor = UIColor.lightGray
         
         self.homeTableView.register(HomeTableViewCell.self, forCellReuseIdentifier: "cell")
         self.homeTableView.register(CustomHeaderCell.self, forHeaderFooterViewReuseIdentifier: "CustomHeaderCell")
@@ -58,31 +82,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.refresh.addTarget(self, action: #selector(handelRefresh), for: .valueChanged)
         self.refresh.tintColor = UIColor.yellow
         homeTableView.addSubview(refresh)
+        self.mainImageViewConstrains()
         
 
-        //TODO it will be imolemented
-        RequestNetworkManager.fetchEvents(dateFrom: dateFromURL, dateTo: dateToURL, leagueID: HollandLeagueID, handler: {
-            self.arrayOfData = Statistics.allStatistics
-            
-            self.arrayOfData.forEach({ (item) in
-                let date = MyDate(time: item.matchTime, date: item.date)
-                
-                var isAddedToEvents = false
-                
-                for (index, itemEvent) in self.events.enumerated() {
-                    if itemEvent.0.time == date.time && itemEvent.0.date == date.date {
-                        self.events[index].1.append(item)
-                        isAddedToEvents = true
-                        break
-                    }
-                }
-                
-                if !isAddedToEvents {
-                    self.events.append((date, [item]))
-                }
-            })
-            self.homeTableView.reloadData()
-        })
+       
     }
 
     

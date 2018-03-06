@@ -27,34 +27,27 @@ extension RequestNetworkManager {
         
         let dictURL = ["action=" : "get_events", "from=" : "2017-08-01", "to=" : "2018-06-01", "league_id=" : "137"]
         
-//        func convertToURL(Dict: [String: String]) -> String {
-//            var url = ""
-//            for (urlParam, urlValue) in Dict {
-//                let paramAndValue = urlParam + urlValue + "&"
-//                url += paramAndValue
-//            }
-//            url = baseURL + url + API_KEY
-//            return url
-//        }
-        
-//        print(convertToURL(Dict: dictURL))
-        
         Alamofire.SessionManager.default.requestWithoutCache(convertToURL(Dict: dictURL)).responseJSON { (response) in
             let result = response.result
             if let dictLeague = result.value as? [Dictionary<String, AnyObject>] {
                 for dictStat in dictLeague {
                     let statistics = Statistics(statDict: dictStat)
-                    parseEventsNew(dict: dictStat, complition: { (arrayHaveTime) in
+                    let game = Games.createGames(from: statistics)
+                    
+                    parseEventsNew(f: game, dict: dictStat, complition: { (arrayHaveTime) in
+                        
                         statistics.events = arrayHaveTime
                     })
                     Statistics.allStatistics.append(statistics)
+//                    let result = TeamSeason.createFromStatistics(from: statistics)
+//                    print(result)
                 }
                 handler()
             }
         }
     }
     
-    static func parseEventsNew(dict: [String: AnyObject], complition: (([HaveTime]) -> Void)) {
+    static func parseEventsNew(f: Games, dict: [String: AnyObject], complition: (([HaveTime]) -> Void)) {
         var arrayEvents = [HaveTime]()
             
             if let goalscorerInNet = dict["goalscorer"] as? [[String: AnyObject]] {
@@ -74,7 +67,10 @@ extension RequestNetworkManager {
                     if let awayScore = goalScorer["away_scorer"] as? String {
                         goalscorer.awayScorer = awayScore
                     }
+                    let goal = GoalScorer.createGoalScorer(from: goalscorer)
+                    f.addGoals(goals: goal)
                     arrayEvents.append(goalscorer)
+                    
                 }
             }
         
@@ -95,6 +91,8 @@ extension RequestNetworkManager {
                 if let awayFault = card["away_fault"] as? String {
                     cardScorer.awayFault = awayFault
                 }
+                let cardS = GotCards.createGotCards(from: cardScorer)
+                f.addCard(cards: cardS)
                 arrayEvents.append(cardScorer)
             }
         }

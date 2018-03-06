@@ -31,9 +31,7 @@ extension RequestNetworkManager {
             if let dictLeague = result.value as? [Dictionary<String, AnyObject>] {
                 for dictStat in dictLeague {
                     let statistics = EventsStatistics(statDict: dictStat)
-                    parseEventsNew(dict: dictStat, complition: { (arrayHaveTime) in
-                        statistics.events = arrayHaveTime
-                    })
+
                     EventsStatistics.allStatistics.append(statistics)
                 }
                 handler()

@@ -9,7 +9,7 @@
         <attribute name="points" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="position" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="win" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="season" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TeamSeason" inverseName="dataTable" inverseEntity="TeamSeason" syncable="YES"/>
+        <relationship name="season" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TeamSeason" syncable="YES"/>
     </entity>
     <entity name="Games" representedClassName="Games" syncable="YES">
         <attribute name="awayTeamName" optional="YES" attributeType="String" syncable="YES"/>
@@ -26,29 +26,28 @@
         <attribute name="awayScorer" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="homeScorer" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="score" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="timeEvents" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="timeEvents" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="game" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Games" inverseName="goals" inverseEntity="Games" syncable="YES"/>
     </entity>
     <entity name="GotCards" representedClassName="GotCards" syncable="YES">
         <attribute name="awayFault" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="card" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="homeFault" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="timeEvent" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="timeEvent" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="game" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Games" inverseName="cards" inverseEntity="Games" syncable="YES"/>
     </entity>
     <entity name="TeamSeason" representedClassName="TeamSeason" syncable="YES">
-        <attribute name="away" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="home" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="overall" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="teamName" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="dataTable" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DataTable" inverseName="season" inverseEntity="DataTable" syncable="YES"/>
+        <relationship name="away" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DataTable" syncable="YES"/>
         <relationship name="games" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Games" inverseName="season" inverseEntity="Games" syncable="YES"/>
+        <relationship name="home" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DataTable" syncable="YES"/>
+        <relationship name="overall" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DataTable" syncable="YES"/>
     </entity>
     <elements>
-        <element name="DataTable" positionX="160" positionY="-54" width="128" height="178"/>
+        <element name="DataTable" positionX="196" positionY="-52" width="128" height="178"/>
         <element name="Games" positionX="-227" positionY="324" width="128" height="178"/>
-        <element name="GoalScorer" positionX="-405" positionY="189" width="128" height="118"/>
-        <element name="GotCards" positionX="-9" positionY="215" width="128" height="118"/>
-        <element name="TeamSeason" positionX="-162" positionY="-27" width="128" height="133"/>
+        <element name="GoalScorer" positionX="-405" positionY="189" width="128" height="120"/>
+        <element name="GotCards" positionX="-9" positionY="215" width="128" height="120"/>
+        <element name="TeamSeason" positionX="-218" positionY="-9" width="128" height="118"/>
     </elements>
 </model>

@@ -10,7 +10,6 @@
 import Foundation
 import CoreData
 
-
 extension DataTable {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<DataTable> {
@@ -28,3 +27,9 @@ extension DataTable {
     @NSManaged public var season: TeamSeason?
 
 }
+
+
+
+
+
+

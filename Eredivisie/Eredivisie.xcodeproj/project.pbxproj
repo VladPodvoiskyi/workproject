@@ -14,17 +14,12 @@
 		CE2D7E712032ED8000A5FC45 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D7E702032ED8000A5FC45 /* EventsTableViewCell.swift */; };
 		CE2DBAFB2019F66D00BE0C10 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2DBAFA2019F66D00BE0C10 /* Statistics.swift */; };
 		CE2F1572202DD66100467C3D /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F1571202DD66100467C3D /* EventsViewController.swift */; };
-		CE31F88D203C1D0C002553C3 /* GoalScorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F883203C1D0C002553C3 /* GoalScorer.swift */; };
-		CE31F88E203C1D0C002553C3 /* GoalScorer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F884203C1D0C002553C3 /* GoalScorer+CoreDataProperties.swift */; };
-		CE31F88F203C1D0C002553C3 /* DataTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F885203C1D0C002553C3 /* DataTable.swift */; };
-		CE31F890203C1D0C002553C3 /* DataTable+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F886203C1D0C002553C3 /* DataTable+CoreDataProperties.swift */; };
-		CE31F891203C1D0C002553C3 /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F887203C1D0C002553C3 /* Games.swift */; };
-		CE31F892203C1D0C002553C3 /* Games+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F888203C1D0C002553C3 /* Games+CoreDataProperties.swift */; };
-		CE31F893203C1D0C002553C3 /* TeamSeason.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F889203C1D0C002553C3 /* TeamSeason.swift */; };
-		CE31F894203C1D0C002553C3 /* TeamSeason+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F88A203C1D0C002553C3 /* TeamSeason+CoreDataProperties.swift */; };
-		CE31F895203C1D0C002553C3 /* GotCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F88B203C1D0C002553C3 /* GotCards.swift */; };
-		CE31F896203C1D0C002553C3 /* GotCards+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F88C203C1D0C002553C3 /* GotCards+CoreDataProperties.swift */; };
-		CE31F898203C2A44002553C3 /* NSManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F897203C2A44002553C3 /* NSManagedObjectContext.swift */; };
+		CE31F8B9203C6A26002553C3 /* TeamSeason+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F8AF203C6A26002553C3 /* TeamSeason+CoreDataClass.swift */; };
+		CE31F8BA203C6A26002553C3 /* TeamSeason+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F8B0203C6A26002553C3 /* TeamSeason+CoreDataProperties.swift */; };
+		CE31F8BB203C6A26002553C3 /* Games+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F8B1203C6A26002553C3 /* Games+CoreDataClass.swift */; };
+		CE31F8BC203C6A26002553C3 /* Games+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F8B2203C6A26002553C3 /* Games+CoreDataProperties.swift */; };
+		CE31F8BD203C6A26002553C3 /* DataTable+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F8B3203C6A26002553C3 /* DataTable+CoreDataClass.swift */; };
+		CE31F8BE203C6A26002553C3 /* DataTable+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31F8B4203C6A26002553C3 /* DataTable+CoreDataProperties.swift */; };
 		CE3418C520206A04008BA918 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3418C420206A04008BA918 /* RequestManager.swift */; };
 		CE3418C720206B07008BA918 /* RequestNetworkManager+Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3418C620206B07008BA918 /* RequestNetworkManager+Table.swift */; };
 		CE3418C92020702A008BA918 /* RequestNetworkManager+HomeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3418C82020702A008BA918 /* RequestNetworkManager+HomeTable.swift */; };
@@ -44,6 +39,10 @@
 		CE4AB5F120320E7A0044BAA9 /* EventsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AB5F020320E7A0044BAA9 /* EventsHeaderTableViewCell.swift */; };
 		CE4AB5F320320F9B0044BAA9 /* EventsStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AB5F220320F9B0044BAA9 /* EventsStatistics.swift */; };
 		CE4AB5F5203210C90044BAA9 /* RequestNetworkManager+EventsStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AB5F4203210C90044BAA9 /* RequestNetworkManager+EventsStatistics.swift */; };
+		CE5E5ED5204D7CCA00091316 /* GotCards+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E5ED1204D7CCA00091316 /* GotCards+CoreDataClass.swift */; };
+		CE5E5ED6204D7CCA00091316 /* GotCards+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E5ED2204D7CCA00091316 /* GotCards+CoreDataProperties.swift */; };
+		CE5E5ED7204D7CCA00091316 /* GoalScorer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E5ED3204D7CCA00091316 /* GoalScorer+CoreDataClass.swift */; };
+		CE5E5ED8204D7CCA00091316 /* GoalScorer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E5ED4204D7CCA00091316 /* GoalScorer+CoreDataProperties.swift */; };
 		CE69BB7A2004E1BD00844D53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69BB792004E1BD00844D53 /* AppDelegate.swift */; };
 		CE69BB7C2004E1BE00844D53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69BB7B2004E1BE00844D53 /* ViewController.swift */; };
 		CE69BB7F2004E1BE00844D53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE69BB7D2004E1BE00844D53 /* Main.storyboard */; };
@@ -66,17 +65,12 @@
 		CE2D7E702032ED8000A5FC45 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
 		CE2DBAFA2019F66D00BE0C10 /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		CE2F1571202DD66100467C3D /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
-		CE31F883203C1D0C002553C3 /* GoalScorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalScorer.swift; sourceTree = "<group>"; };
-		CE31F884203C1D0C002553C3 /* GoalScorer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoalScorer+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		CE31F885203C1D0C002553C3 /* DataTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTable.swift; sourceTree = "<group>"; };
-		CE31F886203C1D0C002553C3 /* DataTable+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataTable+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		CE31F887203C1D0C002553C3 /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
-		CE31F888203C1D0C002553C3 /* Games+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Games+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		CE31F889203C1D0C002553C3 /* TeamSeason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSeason.swift; sourceTree = "<group>"; };
-		CE31F88A203C1D0C002553C3 /* TeamSeason+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TeamSeason+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		CE31F88B203C1D0C002553C3 /* GotCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotCards.swift; sourceTree = "<group>"; };
-		CE31F88C203C1D0C002553C3 /* GotCards+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GotCards+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		CE31F897203C2A44002553C3 /* NSManagedObjectContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectContext.swift; sourceTree = "<group>"; };
+		CE31F8AF203C6A26002553C3 /* TeamSeason+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TeamSeason+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE31F8B0203C6A26002553C3 /* TeamSeason+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TeamSeason+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE31F8B1203C6A26002553C3 /* Games+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Games+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE31F8B2203C6A26002553C3 /* Games+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Games+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE31F8B3203C6A26002553C3 /* DataTable+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataTable+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE31F8B4203C6A26002553C3 /* DataTable+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataTable+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CE3418C420206A04008BA918 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		CE3418C620206B07008BA918 /* RequestNetworkManager+Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestNetworkManager+Table.swift"; sourceTree = "<group>"; };
 		CE3418C82020702A008BA918 /* RequestNetworkManager+HomeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestNetworkManager+HomeTable.swift"; sourceTree = "<group>"; };
@@ -96,6 +90,10 @@
 		CE4AB5F020320E7A0044BAA9 /* EventsHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		CE4AB5F220320F9B0044BAA9 /* EventsStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsStatistics.swift; sourceTree = "<group>"; };
 		CE4AB5F4203210C90044BAA9 /* RequestNetworkManager+EventsStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestNetworkManager+EventsStatistics.swift"; sourceTree = "<group>"; };
+		CE5E5ED1204D7CCA00091316 /* GotCards+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GotCards+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE5E5ED2204D7CCA00091316 /* GotCards+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GotCards+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE5E5ED3204D7CCA00091316 /* GoalScorer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoalScorer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE5E5ED4204D7CCA00091316 /* GoalScorer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoalScorer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CE69BB762004E1BD00844D53 /* Eredivisie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eredivisie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE69BB792004E1BD00844D53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE69BB7B2004E1BE00844D53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,17 +133,16 @@
 		CE31F85A203C19C7002553C3 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				CE31F883203C1D0C002553C3 /* GoalScorer.swift */,
-				CE31F884203C1D0C002553C3 /* GoalScorer+CoreDataProperties.swift */,
-				CE31F885203C1D0C002553C3 /* DataTable.swift */,
-				CE31F886203C1D0C002553C3 /* DataTable+CoreDataProperties.swift */,
-				CE31F887203C1D0C002553C3 /* Games.swift */,
-				CE31F888203C1D0C002553C3 /* Games+CoreDataProperties.swift */,
-				CE31F889203C1D0C002553C3 /* TeamSeason.swift */,
-				CE31F88A203C1D0C002553C3 /* TeamSeason+CoreDataProperties.swift */,
-				CE31F88B203C1D0C002553C3 /* GotCards.swift */,
-				CE31F88C203C1D0C002553C3 /* GotCards+CoreDataProperties.swift */,
-				CE31F897203C2A44002553C3 /* NSManagedObjectContext.swift */,
+				CE5E5ED1204D7CCA00091316 /* GotCards+CoreDataClass.swift */,
+				CE5E5ED2204D7CCA00091316 /* GotCards+CoreDataProperties.swift */,
+				CE5E5ED3204D7CCA00091316 /* GoalScorer+CoreDataClass.swift */,
+				CE5E5ED4204D7CCA00091316 /* GoalScorer+CoreDataProperties.swift */,
+				CE31F8AF203C6A26002553C3 /* TeamSeason+CoreDataClass.swift */,
+				CE31F8B0203C6A26002553C3 /* TeamSeason+CoreDataProperties.swift */,
+				CE31F8B1203C6A26002553C3 /* Games+CoreDataClass.swift */,
+				CE31F8B2203C6A26002553C3 /* Games+CoreDataProperties.swift */,
+				CE31F8B3203C6A26002553C3 /* DataTable+CoreDataClass.swift */,
+				CE31F8B4203C6A26002553C3 /* DataTable+CoreDataProperties.swift */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
@@ -387,7 +384,7 @@
 		};
 		7DAE6E8AC1618A8F3038F1BB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
@@ -398,7 +395,7 @@
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Eredivisie-checkManifestLockResult.txt",
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
@@ -410,45 +407,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE31F893203C1D0C002553C3 /* TeamSeason.swift in Sources */,
 				CE3418C520206A04008BA918 /* RequestManager.swift in Sources */,
 				CE3418C92020702A008BA918 /* RequestNetworkManager+HomeTable.swift in Sources */,
+				CE31F8BE203C6A26002553C3 /* DataTable+CoreDataProperties.swift in Sources */,
 				CE2D7E712032ED8000A5FC45 /* EventsTableViewCell.swift in Sources */,
 				CE69BB7C2004E1BE00844D53 /* ViewController.swift in Sources */,
-				CE31F894203C1D0C002553C3 /* TeamSeason+CoreDataProperties.swift in Sources */,
 				CE3A68B2201897A6000CB942 /* CustomHeaderCell.swift in Sources */,
-				CE31F892203C1D0C002553C3 /* Games+CoreDataProperties.swift in Sources */,
+				CE31F8BC203C6A26002553C3 /* Games+CoreDataProperties.swift in Sources */,
 				CEDF5C9C2012173800D2123F /* Alamofire+Custom.swift in Sources */,
 				CE4232FC20060AAE00E01DDA /* TableViewController.swift in Sources */,
 				CE82A9512028BE8400014F25 /* MatchDetailsView.swift in Sources */,
-				CE31F88F203C1D0C002553C3 /* DataTable.swift in Sources */,
+				CE5E5ED6204D7CCA00091316 /* GotCards+CoreDataProperties.swift in Sources */,
 				CE4AB5F320320F9B0044BAA9 /* EventsStatistics.swift in Sources */,
 				CE2F1572202DD66100467C3D /* EventsViewController.swift in Sources */,
-				CE31F88D203C1D0C002553C3 /* GoalScorer.swift in Sources */,
+				CE5E5ED5204D7CCA00091316 /* GotCards+CoreDataClass.swift in Sources */,
 				CE69BB822004E1BE00844D53 /* Eredivisie.xcdatamodeld in Sources */,
 				CE2DBAFB2019F66D00BE0C10 /* Statistics.swift in Sources */,
+				CE31F8BD203C6A26002553C3 /* DataTable+CoreDataClass.swift in Sources */,
 				CE3FFFDC202494270005FE4C /* MatchDetailsCell.swift in Sources */,
+				CE5E5ED8204D7CCA00091316 /* GoalScorer+CoreDataProperties.swift in Sources */,
 				CE3418C720206B07008BA918 /* RequestNetworkManager+Table.swift in Sources */,
 				CE27EBA62006352C0045F9A6 /* TableCell.swift in Sources */,
+				CE5E5ED7204D7CCA00091316 /* GoalScorer+CoreDataClass.swift in Sources */,
 				CE411DD22029CCB1005441DB /* CustomHeaderMatchDetailsCell.swift in Sources */,
 				CE460094201F42C5004D5B0D /* CoreDataStack.swift in Sources */,
+				CE31F8BA203C6A26002553C3 /* TeamSeason+CoreDataProperties.swift in Sources */,
 				CE4AB5F120320E7A0044BAA9 /* EventsHeaderTableViewCell.swift in Sources */,
 				CE816FCF2015E35400B9D65C /* HomeTableViewCell.swift in Sources */,
 				CEDF5C9E20121C7D00D2123F /* HomeViewController.swift in Sources */,
 				CE69BB7A2004E1BD00844D53 /* AppDelegate.swift in Sources */,
 				CE4AB5F5203210C90044BAA9 /* RequestNetworkManager+EventsStatistics.swift in Sources */,
+				CE31F8BB203C6A26002553C3 /* Games+CoreDataClass.swift in Sources */,
 				CE3FF828202309EB00C35B37 /* MatchDetailsViewController.swift in Sources */,
-				CE31F891203C1D0C002553C3 /* Games.swift in Sources */,
 				CE1695652005091300E3BAE8 /* Team.swift in Sources */,
-				CE31F890203C1D0C002553C3 /* DataTable+CoreDataProperties.swift in Sources */,
 				CE1695632005053F00E3BAE8 /* Constants.swift in Sources */,
-				CE31F88E203C1D0C002553C3 /* GoalScorer+CoreDataProperties.swift in Sources */,
 				CE4140EC2021EAB0006B3EA1 /* ViewsExtension.swift in Sources */,
-				CE31F896203C1D0C002553C3 /* GotCards+CoreDataProperties.swift in Sources */,
 				CE3A2589202AE08600900901 /* MatchDetailsModel + Statictics.swift in Sources */,
-				CE31F898203C2A44002553C3 /* NSManagedObjectContext.swift in Sources */,
+				CE31F8B9203C6A26002553C3 /* TeamSeason+CoreDataClass.swift in Sources */,
 				CEDF5C992011E31800D2123F /* MainViewController.swift in Sources */,
-				CE31F895203C1D0C002553C3 /* GotCards.swift in Sources */,
 				CE4140EA2021BBB4006B3EA1 /* TeamViewModel.swift in Sources */,
 				CE3FFFD720247D3C0005FE4C /* MatchDetailsModel.swift in Sources */,
 			);
@@ -589,7 +585,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QKUA5PMTCF;
 				INFOPLIST_FILE = Eredivisie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chi.Eredivisie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -604,7 +602,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QKUA5PMTCF;
 				INFOPLIST_FILE = Eredivisie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chi.Eredivisie;
 				PRODUCT_NAME = "$(TARGET_NAME)";

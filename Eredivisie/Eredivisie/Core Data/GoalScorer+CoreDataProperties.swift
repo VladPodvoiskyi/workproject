@@ -2,7 +2,7 @@
 //  GoalScorer+CoreDataProperties.swift
 //  Eredivisie
 //
-//  Created by user on 2/20/18.
+//  Created by user on 3/5/18.
 //  Copyright © 2018 vlad. All rights reserved.
 //
 //
@@ -20,7 +20,7 @@ extension GoalScorer {
     @NSManaged public var awayScorer: String?
     @NSManaged public var homeScorer: String?
     @NSManaged public var score: String?
-    @NSManaged public var timeEvents: Int32
+    @NSManaged public var timeEvents: String?
     @NSManaged public var game: Games?
 
 }

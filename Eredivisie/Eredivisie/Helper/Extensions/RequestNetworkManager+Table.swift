@@ -18,6 +18,7 @@ extension RequestNetworkManager {
             if let dictLeague = result.value as? [Dictionary<String, AnyObject>] {
                 for dictTeam in dictLeague {
                     let team = Team(teamDict: dictTeam)
+//                    TeamSeason.create(from: team)
                     Team.allTeams.append(team)
                 }
                 
